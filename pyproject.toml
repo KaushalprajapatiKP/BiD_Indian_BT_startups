@@ -1,0 +1,27 @@
+[project]
+name  = "BID_Indian_BT_startups_data_pipeline"
+version = "0.1.0"
+description = "Automated Data Collection and analysis for BID_Indian_BT_startups"
+authors = [
+    { name = "Kaushal Prajapati", email = "kaushalprajapati5296@gmail.com"}
+]
+requires-python = ">=3.10"
+
+dependencies =  [
+    "requests",
+    "beautifulsoup4",
+    "lxml",
+    "scrapy",
+    "selenium",
+    "newspaper3k",
+    "pandas",
+    "numpy",
+    "psycopg2-binary",
+    "sqlalchemy",
+    "schedule",
+    "pyyaml",
+    "langchain",
+    "transformers"
+]
+
+[tool.uv]
