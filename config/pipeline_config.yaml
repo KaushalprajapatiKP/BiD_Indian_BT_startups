@@ -1,0 +1,10 @@
+pipeline:
+  mode: pilot       # pilot or production
+  batch_size: 25
+
+scraping:
+  delay: 1.0
+  timeout: 30
+
+quality:
+  threshold: 0.75

@@ -1,0 +1,9 @@
+# CSS selectors or XPath for website scraping
+
+team_section:
+  headers: ["team", "founder", "leadership"]
+  list_tags: ["ul", "div.team-list"]
+
+advisors_section:
+  headers: ["advisor", "mentor", "board"]
+  list_tags: ["ul", "div.advisors-list"]

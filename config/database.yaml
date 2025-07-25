@@ -1,0 +1,6 @@
+database:
+  host: localhost
+  port: 5432
+  name: biotech_startups
+  user: postgres
+  password: your_db_password

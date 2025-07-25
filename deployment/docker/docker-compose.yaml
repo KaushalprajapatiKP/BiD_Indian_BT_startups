@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: biotech_startups
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_db_password
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: biotech_startups
+      DB_USER: postgres
+      DB_PASSWORD: your_db_password
+    ports:
+      - "8000:8000"
