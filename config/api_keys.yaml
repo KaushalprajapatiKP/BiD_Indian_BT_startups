@@ -1,7 +1,7 @@
 # API keys for external services
 
 serper:
-  api_key: YOUR_SERPER_API_KEY
+  api_key: "7d095055a0a1d951eca570553f7e35c436aa31414c5b5360f0c12ff8d72de639"
 
-openai:
-  api_key: YOUR_OPENAI_API_KEY
+# openai:
+#   api_key: YOUR_OPENAI_API_KEY

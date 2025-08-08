@@ -1,9 +1,13 @@
-# CSS selectors or XPath for website scraping
+# CSS selectors or keyword heuristics for website scraping
 
 team_section:
-  headers: ["team", "founder", "leadership"]
-  list_tags: ["ul", "div.team-list"]
+  headers: ["team", "leadership", "management", "founder"]
+  tags: ["ul", "div.team-list", "section.team"]
 
 advisors_section:
   headers: ["advisor", "mentor", "board"]
-  list_tags: ["ul", "div.advisors-list"]
+  tags: ["ul", "div.advisors-list", "section.advisors"]
+
+products_section:
+  headers: ["product", "service", "solution"]
+  tags: ["ul", "div.products", "section.products"]

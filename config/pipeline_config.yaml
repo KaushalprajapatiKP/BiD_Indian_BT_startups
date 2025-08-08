@@ -1,6 +1,6 @@
 pipeline:
   mode: pilot       # pilot or production
-  batch_size: 25
+  batch_size: 19
 
 scraping:
   delay: 1.0

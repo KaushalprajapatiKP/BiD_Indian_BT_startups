@@ -1,103 +1,185 @@
 """
-Command-Line Interface for BiD_Indian_BT_startups Pipeline.
+Command-Line Interface for BiD Indian BT Startups Pipeline.
 
-Supports commands:
-  - run            Run the ETL pipeline (pilot or production)
-  - setup          Initialize database schema and tables
-  - export         Export collected data to CSV
-  - quality-check  Recalculate and update data quality scores
-  - test           Run the test suite via pytest
+Commands Supported:
+  run             Run the full ETL pipeline on a company Excel list
+  setup           Initialize the database schema
+  export          Export data from database to CSV files
+  quality-check   Recalculate and update data quality scores
+  test            Run the test suite via pytest
 
-Usage:
-    python main.py <command> [--mode MODE] [--config CONFIG] [-v]
+Usage Examples:
+  python main.py run --input data/raw/company_list.xlsx --mode pilot
+  python main.py setup
+  python main.py export
+  python main.py quality-check
+  python main.py test -v
 """
 
 import sys
 import argparse
 import logging
 from pathlib import Path
+import subprocess
 
-# Ensure src/ is on the import path
+# Insert src/ into Python module path (adjust path as needed)
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 
-from biotech_pipeline.core.database import create_schema
-from biotech_pipeline.core.quality_scorer import DataQualityScorer
-from biotech_pipeline.utils.config import load_config
-from biotech_pipeline.utils.logger import setup_logger
-from biotech_pipeline.utils.exceptions import PipelineError, DatabaseError, LoadingError
+from src.biotech_pipeline.pipeline.etl_pipeline import ETLPipeline
+from src.biotech_pipeline.core.database import create_schema, SessionLocal
+from src.biotech_pipeline.core.model import Company, Person, NewsCoverage
+from src.biotech_pipeline.utils.config import load_config
+from src.biotech_pipeline.utils.logger import setup_logger
+from src.biotech_pipeline.utils.exceptions import PipelineError
 
 logger = logging.getLogger(__name__)
 
 class BioDashboardCLI:
-    """CLI handler that executes pipeline commands."""
+    """Main CLI handler that executes pipeline commands."""
 
     def __init__(self, config_path: str):
-        # Load config YAML + .env overrides
         self.config = load_config(config_path)
+        self.config_path = config_path
 
-    def run_pipeline(self, mode: str = "pilot"):
-        """Placeholder: orchestrate the full ETL pipeline."""
-        logger.info("▶ Running pipeline in '%s' mode", mode)
-        # TODO: import and invoke your ETL orchestration here
+    def run_pipeline(self, excel_path: str, mode: str = "pilot"):
+        """Execute the ETL pipeline on company Excel list."""
+        logger.info(f"▶ Starting ETL pipeline in '{mode}' mode")
+        logger.info(f"Input Excel file: {excel_path}")
+
+        if not Path(excel_path).is_file():
+            raise PipelineError(f"Input Excel file not found: {excel_path}")
+
+        try:
+            pipeline = ETLPipeline(self.config_path)
+            pipeline.run(excel_path, mode)
+            logger.info("✅ ETL pipeline completed successfully")
+        except Exception as e:
+            raise PipelineError(f"ETL run failed: {e}")
 
     def setup_database(self):
-        """Create database schema, tables, and indexes."""
+        """Create the database schema and tables."""
         logger.info("▶ Setting up database schema")
+
         try:
             create_schema()
+            logger.info("✅ Database schema setup complete")
         except Exception as e:
-            raise DatabaseError(f"Database setup failed: {e}")
+            raise PipelineError(f"Database setup failed: {e}")
 
     def export_data(self):
-        """Export data to CSV files."""
-        logger.info("▶ Exporting data")
-        # TODO: implement CSV export using your loader modules
+        """Export data from database tables to CSV files."""
+        logger.info("▶ Exporting data to CSV files")
+        output_dir = Path("data/outputs")
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        session = SessionLocal()
+        try:
+            # Export companies
+            companies_df = session.query(Company).all()
+            import pandas as pd
+            companies_df = pd.read_sql(session.query(Company).statement, session.bind)
+            companies_export_path = output_dir / "companies_export.csv"
+            companies_df.to_csv(companies_export_path, index=False)
+            logger.info(f"✅ Exported companies to {companies_export_path}")
+
+            # Export people
+            people_df = pd.read_sql(session.query(Person).statement, session.bind)
+            people_export_path = output_dir / "people_export.csv"
+            people_df.to_csv(people_export_path, index=False)
+            logger.info(f"✅ Exported people to {people_export_path}")
+
+            # Export news coverage
+            news_df = pd.read_sql(session.query(NewsCoverage).statement, session.bind)
+            news_export_path = output_dir / "news_export.csv"
+            news_df.to_csv(news_export_path, index=False)
+            logger.info(f"✅ Exported news coverage to {news_export_path}")
+
+        except Exception as e:
+            raise PipelineError(f"Data export failed: {e}")
+        finally:
+            session.close()
 
     def check_data_quality(self):
-        """Recalculate and update data_quality_score for all companies."""
-        logger.info("▶ Checking data quality")
+        """Recalculate and update data quality scores for each company."""
+        logger.info("▶ Performing data quality checks")
+
+        session = SessionLocal()
         try:
-            # Example flow
-            from biotech_pipeline.core.database import SessionLocal
-            from biotech_pipeline.core.model import Company
-            session = SessionLocal()
-            scorer = DataQualityScorer()
             companies = session.query(Company).all()
-            for c in companies:
-                record = {col.name: getattr(c, col.name) for col in c.__table__.columns}
-                score = scorer.calculate(record)
-                c.data_quality_score = score
+            updated_count = 0
+
+            # Example scoring: ratio of key fields filled
+            key_fields = ['registered_name', 'website_url', 'big_award_year']
+
+            for comp in companies:
+                filled_fields = sum(1 for f in key_fields if getattr(comp, f))
+                score = filled_fields / len(key_fields)
+                comp.data_quality_score = round(score, 2)
+                updated_count += 1
+
             session.commit()
-            session.close()
+            logger.info(f"✅ Updated data quality scores for {updated_count} companies")
+
         except Exception as e:
+            session.rollback()
             raise PipelineError(f"Data quality check failed: {e}")
+        finally:
+            session.close()
 
     def run_tests(self):
         """Run pytest test suite."""
-        logger.info("▶ Running tests")
-        import subprocess
-        result = subprocess.run([sys.executable, "-m", "pytest", "tests/"], capture_output=True, text=True)
+        logger.info("▶ Running test suite via pytest")
+
+        result = subprocess.run([
+            sys.executable, "-m", "pytest", "tests/", "-v"
+        ], capture_output=True, text=True)
+
         print(result.stdout)
+
         if result.returncode != 0:
-            print(result.stderr)
+            logger.error("❌ Tests failed:")
+            print("STDERR:", result.stderr)
             raise PipelineError("Some tests failed")
 
+        logger.info("✅ All tests passed successfully")
+
+
 def main():
+    """Command-line entry point."""
+
     parser = argparse.ArgumentParser(description="BiD Indian BT Startups Pipeline CLI")
-    parser.add_argument("command", choices=["run","setup","export","quality-check","test"])
-    parser.add_argument("--mode", choices=["pilot","production"], default="pilot")
-    parser.add_argument("--config", default="config/pipeline_config.yaml",
-                        help="Path to pipeline_config.yaml")
-    parser.add_argument("-v","--verbose", action="store_true", help="Enable DEBUG logging")
+
+    parser.add_argument("command", 
+                        choices=["run", "setup", "export", "quality-check", "test"],
+                        help="Command to execute")
+
+    parser.add_argument("--mode", 
+                        choices=["pilot", "production"], 
+                        default="pilot",
+                        help="Pipeline execution mode (only for 'run')")
+
+    parser.add_argument("--config", 
+                        default="config/pipeline_config.yaml",
+                        help="Path to pipeline configuration YAML file")
+
+    parser.add_argument("--input", 
+                        default="data/raw/company_list.xlsx",
+                        help="Input Excel file for company list (only for 'run')")
+
+    parser.add_argument("-v", "--verbose",
+                        action="store_true",
+                        help="Enable DEBUG level logging")
+
     args = parser.parse_args()
 
-    # Configure logging
+    # Setup logging
     setup_logger(verbose=args.verbose)
 
     cli = BioDashboardCLI(config_path=args.config)
+
     try:
         if args.command == "run":
-            cli.run_pipeline(mode=args.mode)
+            cli.run_pipeline(excel_path=args.input, mode=args.mode)
         elif args.command == "setup":
             cli.setup_database()
         elif args.command == "export":
@@ -107,8 +189,9 @@ def main():
         elif args.command == "test":
             cli.run_tests()
     except Exception as e:
-        logger.error("❌ %s", e)
+        logger.error(f"❌ Command failed: {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

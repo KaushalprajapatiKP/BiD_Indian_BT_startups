@@ -1,0 +1,33 @@
+2025-08-08 22:54:49,521 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 22:54:49,521 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 22:54:49,521 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: Input Excel file not found: data/raw/company_list.xlsx
+2025-08-08 22:55:12,824 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 22:55:12,824 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 22:55:12,824 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 22:59:20,207 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 22:59:20,207 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 22:59:20,207 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:02:02,688 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:02:02,688 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:02:02,689 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:04:53,046 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:04:53,046 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:04:53,046 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:05:11,065 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:05:11,065 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:05:11,065 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:05:16,396 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:05:16,396 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:05:16,397 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:06:11,792 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:06:11,792 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:06:11,793 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:06:23,801 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:06:23,801 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:06:23,802 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:07:03,120 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:07:03,121 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:07:03,121 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-08 23:09:45,672 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-08 23:09:45,672 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-08 23:09:45,672 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'

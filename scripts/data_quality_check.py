@@ -26,3 +26,11 @@ class DataQualityScorer:
         log.debug("DataQualityScorer: %d/%d fields present => %.2f",
                   present, len(self.required_fields), score)
         return score
+
+
+#!/usr/bin/env python3
+from ..src.biotech_pipeline.cli import BioDashboardCLI
+
+if __name__ == "__main__":
+    cli = BioDashboardCLI("config/pipeline_config.yaml")
+    cli.check_data_quality()
