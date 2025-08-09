@@ -36,3 +36,19 @@ def parse_date(date_str: str, fmt: str = "%Y-%m-%d") -> datetime.date:
         return datetime.strptime(date_str, fmt).date()
     except:
         return None
+
+
+import json
+
+def safe_json_load(text):
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # Possibly log warning about malformed JSON
+        # Optionally use partial decode or fallback default:
+        try:
+            decoder = json.JSONDecoder()
+            obj, idx = decoder.raw_decode(text)
+            return obj
+        except Exception:
+            return {"website": "", "founders": []}

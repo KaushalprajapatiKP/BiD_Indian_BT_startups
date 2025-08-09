@@ -25,7 +25,8 @@ dependencies =  [
     "python-dotenv",
     "pdfplumber",
     "tabula",
-    "llama-cpp-python"
+    "llama-cpp-python",
+    "openpyxl"
 ]
 
 [tool.uv]

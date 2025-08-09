@@ -31,3 +31,876 @@
 2025-08-08 23:09:45,672 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
 2025-08-08 23:09:45,672 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
 2025-08-08 23:09:45,672 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-09 15:01:26,197 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:01:26,197 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:01:26,197 | ERROR   | src.biotech_pipeline.cli | ❌ Command failed: ETL run failed: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-09 15:05:03,942 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:05:03,942 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:05:03,943 | ERROR   | src.biotech_pipeline.cli | ❌ argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'NoneType'
+2025-08-09 15:08:29,488 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:08:29,488 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:08:29,488 | ERROR   | src.biotech_pipeline.cli | ❌ Llama model not found at models/llama-model.gguf
+2025-08-09 15:32:35,655 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:32:35,655 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:32:35,656 | ERROR   | src.biotech_pipeline.cli | ❌ Llama model not found at models/llama-model.gguf
+2025-08-09 15:52:03,137 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:52:03,137 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:52:03,137 | ERROR   | src.biotech_pipeline.cli | ❌ ai_model_path not found in configuration file
+2025-08-09 15:52:15,532 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:52:15,532 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:52:15,532 | ERROR   | src.biotech_pipeline.cli | ❌ ai_model_path not found in configuration file
+2025-08-09 15:55:03,374 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:55:03,374 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:55:16,958 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 15:55:16,960 | ERROR   | src.biotech_pipeline.cli | ❌ Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+2025-08-09 15:55:47,925 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 15:55:47,925 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 15:55:48,272 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 15:55:49,859 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 15:55:54,915 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.ezymind.com:443
+2025-08-09 15:55:56,472 | DEBUG   | urllib3.connectionpool | https://www.ezymind.com:443 "GET / HTTP/1.1" 406 226
+2025-08-09 15:55:56,473 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.ezymind.com): 406 Client Error: Not Acceptable for url: https://www.ezymind.com/
+2025-08-09 15:55:56,475 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 15:55:56,822 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:55:58,019 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ezymind Healthcare Pvt Ltd : 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:55:58,024 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 15:56:03,642 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Dreambot Pvt Ltd: Extra data: line 6 column 1 (char 59)
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 45, in find_website_and_founders
+    data = json.loads(text)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 7 column 1 (char 60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 75, in run
+    info = self.agent.find_website_and_founders(company_clean)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 49, in find_website_and_founders
+    data = json.loads(match.group()) if match else {"website": "", "founders": []}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 6 column 1 (char 59)
+2025-08-09 15:56:03,644 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 15:56:14,812 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Mabgenex Private Limited: Extra data: line 6 column 1 (char 64)
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 45, in find_website_and_founders
+    data = json.loads(text)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 7 column 1 (char 65)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 75, in run
+    info = self.agent.find_website_and_founders(company_clean)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 49, in find_website_and_founders
+    data = json.loads(match.group()) if match else {"website": "", "founders": []}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 6 column 1 (char 64)
+2025-08-09 15:56:14,812 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-09 15:56:18,086 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.cancrie.com:443
+2025-08-09 15:57:18,938 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.cancrie.com): HTTPSConnectionPool(host='www.cancrie.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x110c19580>, 'Connection to www.cancrie.com timed out. (connect timeout=30)'))
+2025-08-09 15:57:19,779 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:21,121 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Cancrie Private Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:21,124 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-09 15:57:23,125 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.spotdotbiotech.com:443
+2025-08-09 15:57:23,481 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.spotdotbiotech.com/): HTTPSConnectionPool(host='www.spotdotbiotech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11109ebd0>: Failed to resolve 'www.spotdotbiotech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 15:57:23,718 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:24,848 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Spotdot Bioinnovations Private Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:24,850 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Flavinlabs Private Limited (BIRAC/CCAMP01917/BIG-21/22)
+2025-08-09 15:57:27,727 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.flavinlabs.com:443
+2025-08-09 15:57:28,577 | DEBUG   | urllib3.connectionpool | https://www.flavinlabs.com:443 "GET / HTTP/1.1" 200 None
+2025-08-09 15:57:29,999 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Flavinlabs%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:31,157 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company FlavinLabs Private Limited : 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:31,159 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Inofinity Research And Development Private Limited (BIRAC/KIIT01604/BIG-20/22)
+2025-08-09 15:57:32,980 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): inofinity.com:443
+2025-08-09 15:57:33,754 | DEBUG   | urllib3.connectionpool | https://inofinity.com:443 "GET / HTTP/1.1" 200 114
+2025-08-09 15:57:33,759 | DEBUG   | charset_normalizer | Encoding detection: ascii is most likely the one.
+2025-08-09 15:57:34,941 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Inofinity%20Research%20And%20Development%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:36,134 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Inofinity Research and Development Private Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:36,136 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Innodx Solutions Private Limited (BIRAC/VENTURE0864/BIG-20/22)
+2025-08-09 15:57:42,349 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company  InnoDx Solutions Private
+Limited
+: Extra data: line 6 column 1 (char 61)
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 45, in find_website_and_founders
+    data = json.loads(text)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 7 column 1 (char 62)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 75, in run
+    info = self.agent.find_website_and_founders(company_clean)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/agents/search_agent.py", line 49, in find_website_and_founders
+    data = json.loads(match.group()) if match else {"website": "", "founders": []}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 341, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 6 column 1 (char 61)
+2025-08-09 15:57:42,350 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ardor Biomed India Pvt Ltd (BIRAC/CCAMP01675/BIG-19/21)
+2025-08-09 15:57:45,031 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): ardorbiomed.com:443
+2025-08-09 15:57:46,570 | DEBUG   | urllib3.connectionpool | https://ardorbiomed.com:443 "GET / HTTP/1.1" 200 1689
+2025-08-09 15:57:48,380 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ardor%20Biomed%20India%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:49,543 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ardor Biomed India PVT LTD: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:49,544 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cosmos Biotech Llp (BIRAC/CCAMP01624/BIG-19/21)
+2025-08-09 15:57:53,769 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): official%20website%20url:443
+2025-08-09 15:57:53,787 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://official website URL): HTTPSConnectionPool(host='official%20website%20url', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x111208950>: Failed to resolve 'official%20website%20url' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 15:57:54,026 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cosmos%20Biotech%20Llp&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:55,197 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company COSMOS Biotech LLP: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:55,198 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Procyto Labs Pvt. Ltd. (BIRAC/KIIT01337/BIG-18/21)
+2025-08-09 15:57:57,961 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): procytolabs.com:443
+2025-08-09 15:57:58,374 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://procytolabs.com/): HTTPSConnectionPool(host='procytolabs.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11122b350>: Failed to resolve 'procytolabs.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 15:57:58,617 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Procyto%20Labs%20Pvt.%20Ltd.&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:57:59,777 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company ProCyto Labs Pvt. Ltd.: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:57:59,779 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Drufarm Technology Private Limited (BIRAC/VENTURE0724/BIG-18/21)
+2025-08-09 15:58:02,590 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.dufarmtech.com:443
+2025-08-09 15:58:03,057 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.dufarmtech.com/): HTTPSConnectionPool(host='www.dufarmtech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x111259d60>: Failed to resolve 'www.dufarmtech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 15:58:03,292 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Drufarm%20Technology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 15:58:04,434 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company DruFarm Technology Private
+Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 15:58:04,436 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: F3 Biotechnology Private Limited (BIRAC/KIIT01278/BIG-17/20)
+2025-08-09 16:01:14,263 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 16:01:14,263 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 16:01:14,609 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 16:01:14,753 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 16:01:20,077 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 16:01:20,400 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:21,568 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ezymind Healthcare Pvt Ltd : 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 16:01:21,573 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 16:01:27,301 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:28,445 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Dreambot Pvt Ltd: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 16:01:28,447 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 16:01:39,972 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:41,102 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Mabgenex Private Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 16:01:41,104 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-09 16:01:44,624 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:45,928 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Cancrie Private Limited: 'big_award_cohort' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'big_award_cohort' is an invalid keyword argument for Company
+2025-08-09 16:01:45,929 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-09 16:01:47,877 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.spotdotbiotech.com:443
+2025-08-09 16:01:47,879 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.spotdotbiotech.com/): HTTPSConnectionPool(host='www.spotdotbiotech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x124eb2570>: Failed to resolve 'www.spotdotbiotech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 16:01:48,061 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:53,134 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 16:01:53,135 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 16:01:53,435 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 16:01:53,574 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 16:01:58,300 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 16:01:58,534 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:01:59,680 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ezymind Healthcare Pvt Ltd : 'category' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'category' is an invalid keyword argument for Company
+2025-08-09 16:01:59,684 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 16:02:05,439 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:02:06,564 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Dreambot Pvt Ltd: 'category' is an invalid keyword argument for Company
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 25, in load_companies
+    obj = Company(**data)
+          ^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 571, in _initialize_instance
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/state.py", line 569, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 2173, in _declarative_constructor
+    raise TypeError(
+TypeError: 'category' is an invalid keyword argument for Company
+2025-08-09 16:02:06,565 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 16:03:20,988 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 16:03:20,988 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 16:03:21,271 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 16:03:21,395 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 16:03:26,135 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 16:03:26,389 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:03:27,534 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies
+2025-08-09 16:03:27,537 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for None
+2025-08-09 16:03:27,539 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for None
+2025-08-09 16:03:27,539 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for None
+2025-08-09 16:03:27,539 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for None
+2025-08-09 16:03:27,540 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 16:03:33,217 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:03:34,333 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies
+2025-08-09 16:03:34,335 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for None
+2025-08-09 16:03:34,336 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for None
+2025-08-09 16:03:34,337 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for None
+2025-08-09 16:03:34,337 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for None
+2025-08-09 16:03:34,337 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 16:03:45,662 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:03:46,801 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies
+2025-08-09 16:03:46,803 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for None
+2025-08-09 16:03:46,804 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for None
+2025-08-09 16:03:46,804 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for None
+2025-08-09 16:03:46,804 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for None
+2025-08-09 16:03:46,805 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-09 16:09:29,790 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 16:09:29,790 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 16:09:30,077 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 16:09:30,215 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 16:09:35,280 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 16:09:35,538 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:09:36,673 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ezymind Healthcare Pvt Ltd : 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 174, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 16:09:36,674 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 16:09:42,346 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 16:09:43,455 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Dreambot Pvt Ltd: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 174, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 16:09:43,456 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 20:08:57,787 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 20:08:57,788 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 20:08:59,311 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 20:08:59,447 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 20:09:04,609 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 20:09:05,134 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:06,484 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ezymind Healthcare Pvt Ltd : 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:06,487 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 20:09:12,553 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:13,680 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Dreambot Pvt Ltd: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:13,681 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 20:09:25,233 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:26,373 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Mabgenex Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:26,375 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-09 20:09:29,989 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:31,281 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Cancrie Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:31,282 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-09 20:09:33,400 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.spotdotbiotech.com:443
+2025-08-09 20:09:33,585 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.spotdotbiotech.com/): HTTPSConnectionPool(host='www.spotdotbiotech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11ec9aea0>: Failed to resolve 'www.spotdotbiotech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 20:09:33,770 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:34,965 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Spotdot Bioinnovations Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:34,966 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Flavinlabs Private Limited (BIRAC/CCAMP01917/BIG-21/22)
+2025-08-09 20:09:38,191 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Flavinlabs%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:39,401 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company FlavinLabs Private Limited : 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:39,402 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Inofinity Research And Development Private Limited (BIRAC/KIIT01604/BIG-20/22)
+2025-08-09 20:09:41,174 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): inofinity.com:443
+2025-08-09 20:09:41,737 | DEBUG   | urllib3.connectionpool | https://inofinity.com:443 "GET / HTTP/1.1" 200 114
+2025-08-09 20:09:41,742 | DEBUG   | charset_normalizer | Encoding detection: ascii is most likely the one.
+2025-08-09 20:09:42,924 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Inofinity%20Research%20And%20Development%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:44,146 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Inofinity Research and Development Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:44,148 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Innodx Solutions Private Limited (BIRAC/VENTURE0864/BIG-20/22)
+2025-08-09 20:09:50,165 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Innodx%20Solutions%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:51,363 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company  InnoDx Solutions Private
+Limited
+: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:51,364 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ardor Biomed India Pvt Ltd (BIRAC/CCAMP01675/BIG-19/21)
+2025-08-09 20:09:54,136 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ardor%20Biomed%20India%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:09:55,293 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Ardor Biomed India PVT LTD: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:09:55,294 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cosmos Biotech Llp (BIRAC/CCAMP01624/BIG-19/21)
+2025-08-09 20:09:59,355 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cosmos%20Biotech%20Llp&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:00,523 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company COSMOS Biotech LLP: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:00,524 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Procyto Labs Pvt. Ltd. (BIRAC/KIIT01337/BIG-18/21)
+2025-08-09 20:10:03,194 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Procyto%20Labs%20Pvt.%20Ltd.&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:04,420 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company ProCyto Labs Pvt. Ltd.: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:04,421 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Drufarm Technology Private Limited (BIRAC/VENTURE0724/BIG-18/21)
+2025-08-09 20:10:07,148 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Drufarm%20Technology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:08,307 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company DruFarm Technology Private
+Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:08,308 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: F3 Biotechnology Private Limited (BIRAC/KIIT01278/BIG-17/20)
+2025-08-09 20:10:11,292 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=F3%20Biotechnology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:12,543 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company F3 Biotechnology Private
+Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:12,544 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mediklik Webhealth Pvt Ltd (BIRAC/KIIT01290/BIG-17/20)
+2025-08-09 20:10:14,334 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.mediklik.com:443
+2025-08-09 20:10:15,589 | DEBUG   | urllib3.connectionpool | https://www.mediklik.com:443 "GET / HTTP/1.1" 301 None
+2025-08-09 20:10:15,591 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): vensi.in:443
+2025-08-09 20:10:18,353 | DEBUG   | urllib3.connectionpool | https://vensi.in:443 "GET / HTTP/1.1" 200 13909
+2025-08-09 20:10:19,585 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mediklik%20Webhealth%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:20,768 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Mediklik Webhealth Pvt Ltd: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:20,769 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Wide Mobility Mechatronics Pvt Ltd (BIRAC/CCAMP01155/BIG-16/20)
+2025-08-09 20:10:23,711 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Wide%20Mobility%20Mechatronics%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:24,970 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Wide Mobility Mechatronics Pvt Ltd: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:24,972 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Loopworm Private Limited (BIRAC/IKP01199/BIG-16/20)
+2025-08-09 20:10:28,905 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Loopworm%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:30,203 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company LOOPWORM PRIVATE LIMITED: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:30,205 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Arboreal Bioinnovations Private Limited (BIRAC/SIIC0163/BIG-15/19)
+2025-08-09 20:10:33,373 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Arboreal%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:34,613 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Arboreal Bioinnovations Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:34,615 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Kcat Enzymatic Private Limited (BIRAC/CCAMP0987/BIG-15/19)
+2025-08-09 20:10:37,605 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Kcat%20Enzymatic%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:10:38,838 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | Failed to process company Kcat Enzymatic Private Limited: 'Company' object has no attribute 'id'
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/pipeline/etl_pipeline.py", line 100, in run
+    company_db_id = self.loader.load_companies([comp_payload])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/loaders/postgress_loader.py", line 173, in load_companies
+    last_company_id = obj.id
+                      ^^^^^^
+AttributeError: 'Company' object has no attribute 'id'
+2025-08-09 20:10:38,839 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ETL pipeline finished.
+2025-08-09 20:10:38,839 | INFO    | src.biotech_pipeline.cli | ✅ ETL pipeline completed.
+2025-08-09 20:13:29,620 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-09 20:13:29,620 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-09 20:13:30,011 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-09 20:13:30,159 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-09 20:13:36,316 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-09 20:13:36,653 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:13:37,829 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT02236/BIG-23/23
+2025-08-09 20:13:37,832 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT02236/BIG-23/23
+2025-08-09 20:13:37,833 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT02236/BIG-23/23
+2025-08-09 20:13:37,833 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT02236/BIG-23/23
+2025-08-09 20:13:37,833 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT02236/BIG-23/23
+2025-08-09 20:13:37,834 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-09 20:13:43,972 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:13:45,158 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SINE0709/BIG-23/23
+2025-08-09 20:13:45,160 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SINE0709/BIG-23/23
+2025-08-09 20:13:45,161 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SINE0709/BIG-23/23
+2025-08-09 20:13:45,161 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SINE0709/BIG-23/23
+2025-08-09 20:13:45,161 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SINE0709/BIG-23/23
+2025-08-09 20:13:45,161 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-09 20:13:56,856 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:13:57,990 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SIIC0882/BIG-22/23
+2025-08-09 20:13:57,992 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SIIC0882/BIG-22/23
+2025-08-09 20:13:57,993 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SIIC0882/BIG-22/23
+2025-08-09 20:13:57,993 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SIIC0882/BIG-22/23
+2025-08-09 20:13:57,993 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SIIC0882/BIG-22/23
+2025-08-09 20:13:57,993 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-09 20:14:01,505 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:02,709 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01696/BIG-22/23
+2025-08-09 20:14:02,710 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01696/BIG-22/23
+2025-08-09 20:14:02,711 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01696/BIG-22/23
+2025-08-09 20:14:02,711 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01696/BIG-22/23
+2025-08-09 20:14:02,711 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01696/BIG-22/23
+2025-08-09 20:14:02,712 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-09 20:14:04,635 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.spotdotbiotech.com:443
+2025-08-09 20:14:04,636 | WARNING | src.biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.spotdotbiotech.com/): HTTPSConnectionPool(host='www.spotdotbiotech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1421377a0>: Failed to resolve 'www.spotdotbiotech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-09 20:14:04,820 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:06,051 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01613/BIG-21/22
+2025-08-09 20:14:06,052 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01613/BIG-21/22
+2025-08-09 20:14:06,053 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01613/BIG-21/22
+2025-08-09 20:14:06,053 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01613/BIG-21/22
+2025-08-09 20:14:06,053 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01613/BIG-21/22
+2025-08-09 20:14:06,054 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Flavinlabs Private Limited (BIRAC/CCAMP01917/BIG-21/22)
+2025-08-09 20:14:09,129 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Flavinlabs%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:10,268 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01917/BIG-21/22
+2025-08-09 20:14:10,271 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01917/BIG-21/22
+2025-08-09 20:14:10,274 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01917/BIG-21/22
+2025-08-09 20:14:10,275 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01917/BIG-21/22
+2025-08-09 20:14:10,275 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01917/BIG-21/22
+2025-08-09 20:14:10,275 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Inofinity Research And Development Private Limited (BIRAC/KIIT01604/BIG-20/22)
+2025-08-09 20:14:12,361 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): inofinity.com:443
+2025-08-09 20:14:12,699 | DEBUG   | urllib3.connectionpool | https://inofinity.com:443 "GET / HTTP/1.1" 200 114
+2025-08-09 20:14:12,701 | DEBUG   | charset_normalizer | Encoding detection: ascii is most likely the one.
+2025-08-09 20:14:13,889 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Inofinity%20Research%20And%20Development%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:15,090 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01604/BIG-20/22
+2025-08-09 20:14:15,091 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01604/BIG-20/22
+2025-08-09 20:14:15,092 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01604/BIG-20/22
+2025-08-09 20:14:15,092 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01604/BIG-20/22
+2025-08-09 20:14:15,092 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01604/BIG-20/22
+2025-08-09 20:14:15,093 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Innodx Solutions Private Limited (BIRAC/VENTURE0864/BIG-20/22)
+2025-08-09 20:14:21,425 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Innodx%20Solutions%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:22,599 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/VENTURE0864/BIG-20/22
+2025-08-09 20:14:22,600 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/VENTURE0864/BIG-20/22
+2025-08-09 20:14:22,601 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/VENTURE0864/BIG-20/22
+2025-08-09 20:14:22,601 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/VENTURE0864/BIG-20/22
+2025-08-09 20:14:22,601 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/VENTURE0864/BIG-20/22
+2025-08-09 20:14:22,602 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Ardor Biomed India Pvt Ltd (BIRAC/CCAMP01675/BIG-19/21)
+2025-08-09 20:14:25,414 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ardor%20Biomed%20India%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:26,526 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01675/BIG-19/21
+2025-08-09 20:14:26,527 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01675/BIG-19/21
+2025-08-09 20:14:26,528 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01675/BIG-19/21
+2025-08-09 20:14:26,528 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01675/BIG-19/21
+2025-08-09 20:14:26,528 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01675/BIG-19/21
+2025-08-09 20:14:26,529 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Cosmos Biotech Llp (BIRAC/CCAMP01624/BIG-19/21)
+2025-08-09 20:14:30,635 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cosmos%20Biotech%20Llp&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:31,792 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01624/BIG-19/21
+2025-08-09 20:14:31,794 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01624/BIG-19/21
+2025-08-09 20:14:31,794 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01624/BIG-19/21
+2025-08-09 20:14:31,795 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01624/BIG-19/21
+2025-08-09 20:14:31,795 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01624/BIG-19/21
+2025-08-09 20:14:31,795 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Procyto Labs Pvt. Ltd. (BIRAC/KIIT01337/BIG-18/21)
+2025-08-09 20:14:34,505 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Procyto%20Labs%20Pvt.%20Ltd.&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:35,654 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01337/BIG-18/21
+2025-08-09 20:14:35,654 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01337/BIG-18/21
+2025-08-09 20:14:35,655 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01337/BIG-18/21
+2025-08-09 20:14:35,655 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01337/BIG-18/21
+2025-08-09 20:14:35,655 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01337/BIG-18/21
+2025-08-09 20:14:35,655 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Drufarm Technology Private Limited (BIRAC/VENTURE0724/BIG-18/21)
+2025-08-09 20:14:38,590 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Drufarm%20Technology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:39,722 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/VENTURE0724/BIG-18/21
+2025-08-09 20:14:39,723 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/VENTURE0724/BIG-18/21
+2025-08-09 20:14:39,724 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/VENTURE0724/BIG-18/21
+2025-08-09 20:14:39,724 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/VENTURE0724/BIG-18/21
+2025-08-09 20:14:39,724 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/VENTURE0724/BIG-18/21
+2025-08-09 20:14:39,724 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: F3 Biotechnology Private Limited (BIRAC/KIIT01278/BIG-17/20)
+2025-08-09 20:14:42,754 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=F3%20Biotechnology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:43,889 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01278/BIG-17/20
+2025-08-09 20:14:43,891 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01278/BIG-17/20
+2025-08-09 20:14:43,891 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01278/BIG-17/20
+2025-08-09 20:14:43,891 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01278/BIG-17/20
+2025-08-09 20:14:43,891 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01278/BIG-17/20
+2025-08-09 20:14:43,892 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Mediklik Webhealth Pvt Ltd (BIRAC/KIIT01290/BIG-17/20)
+2025-08-09 20:14:45,774 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.mediklik.com:443
+2025-08-09 20:14:46,360 | DEBUG   | urllib3.connectionpool | https://www.mediklik.com:443 "GET / HTTP/1.1" 301 None
+2025-08-09 20:14:46,362 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): vensi.in:443
+2025-08-09 20:14:47,801 | DEBUG   | urllib3.connectionpool | https://vensi.in:443 "GET / HTTP/1.1" 200 13909
+2025-08-09 20:14:49,003 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mediklik%20Webhealth%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:50,199 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01290/BIG-17/20
+2025-08-09 20:14:50,201 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01290/BIG-17/20
+2025-08-09 20:14:50,202 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01290/BIG-17/20
+2025-08-09 20:14:50,202 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01290/BIG-17/20
+2025-08-09 20:14:50,202 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01290/BIG-17/20
+2025-08-09 20:14:50,202 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Wide Mobility Mechatronics Pvt Ltd (BIRAC/CCAMP01155/BIG-16/20)
+2025-08-09 20:14:53,128 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Wide%20Mobility%20Mechatronics%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:54,314 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01155/BIG-16/20
+2025-08-09 20:14:54,314 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01155/BIG-16/20
+2025-08-09 20:14:54,315 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01155/BIG-16/20
+2025-08-09 20:14:54,315 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01155/BIG-16/20
+2025-08-09 20:14:54,315 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01155/BIG-16/20
+2025-08-09 20:14:54,315 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Loopworm Private Limited (BIRAC/IKP01199/BIG-16/20)
+2025-08-09 20:14:58,421 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Loopworm%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:14:59,649 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01199/BIG-16/20
+2025-08-09 20:14:59,651 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01199/BIG-16/20
+2025-08-09 20:14:59,651 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01199/BIG-16/20
+2025-08-09 20:14:59,652 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01199/BIG-16/20
+2025-08-09 20:14:59,652 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01199/BIG-16/20
+2025-08-09 20:14:59,652 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Arboreal Bioinnovations Private Limited (BIRAC/SIIC0163/BIG-15/19)
+2025-08-09 20:15:02,969 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Arboreal%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:15:04,189 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SIIC0163/BIG-15/19
+2025-08-09 20:15:04,191 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SIIC0163/BIG-15/19
+2025-08-09 20:15:04,193 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SIIC0163/BIG-15/19
+2025-08-09 20:15:04,194 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SIIC0163/BIG-15/19
+2025-08-09 20:15:04,194 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SIIC0163/BIG-15/19
+2025-08-09 20:15:04,194 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Processing company: Kcat Enzymatic Private Limited (BIRAC/CCAMP0987/BIG-15/19)
+2025-08-09 20:15:07,328 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Kcat%20Enzymatic%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-09 20:15:08,560 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP0987/BIG-15/19
+2025-08-09 20:15:08,562 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP0987/BIG-15/19
+2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP0987/BIG-15/19
+2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP0987/BIG-15/19
+2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP0987/BIG-15/19
+2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ETL pipeline finished.
+2025-08-09 20:15:08,564 | INFO    | src.biotech_pipeline.cli | ✅ ETL pipeline completed.

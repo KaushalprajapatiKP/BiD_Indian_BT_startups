@@ -10,6 +10,7 @@ ETL Pipeline Orchestrator
 
 import logging
 import pandas as pd
+from pathlib import Path
 
 from src.biotech_pipeline.agents.search_agent import SearchAgent
 from src.biotech_pipeline.extractors.website_scraper import WebsiteScraper
@@ -33,30 +34,37 @@ class ETLPipeline:
 
         # Initialize components
         ai_model = self.config.get("ai_model_path")
+        if not ai_model:
+            raise ValueError("ai_model_path not found in configuration file")
         self.agent = SearchAgent(model_path=ai_model)
         self.website = WebsiteScraper(self.config)
         self.news = NewsScraper(self.config)
         self.loader = PostgresLoader()
 
     def run(self, excel_path: str, mode: str = "pilot"):
+        # Ensure schema
         create_schema()
-        print(excel_path)
-        # Read the Excel file with full columns
-        df = pd.read_excel(excel_path, sheet_name=0)
 
-        # Restrict to a subset for pilot mode
+        # Validate path again
+        path_obj = Path(excel_path)
+        if not path_obj.is_file():
+            raise FileNotFoundError(f"ETL Pipeline: Excel file not found at {excel_path}")
+        logger.info("Reading Excel file: %s", excel_path)
+
+        df = pd.read_excel(excel_path, sheet_name=0)
+        if df.empty:
+            raise ValueError("ETL Pipeline: Excel file is empty.")
+
         max_count = 50 if mode == "pilot" else len(df)
         df = df.head(max_count)
-        print(df)
-
         for idx, row in df.iterrows():
             try:
                 # Map Excel columns to variables
                 big_award_id = row["Reference Number"]
                 company_name = row["Name Of The Company"]
                 big_award_year = int(row["Grant Year"])
-                big_award_cohort = int(row["Cohort Numer (BIG)"])  # Note typo "Numer" is used as per your Excel
-                category = row.get("Category", None)
+                # big_award_cohort = int(row["Cohort Numer (BIG)"])  # Note typo "Numer" is used as per your Excel
+                # category = row.get("Category", None)
                 
                 # Clean and normalize fields
                 company_clean = clean_company_name(company_name)
@@ -83,8 +91,8 @@ class ETLPipeline:
                     "big_award_id": big_award_id,
                     "registered_name": company_clean,
                     "big_award_year": big_award_year,
-                    "big_award_cohort": big_award_cohort,
-                    "category": category,
+                    # "big_award_cohort": big_award_cohort,
+                    # "category": category,
                     "website_url": website
                 }
 

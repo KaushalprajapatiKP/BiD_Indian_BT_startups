@@ -8,6 +8,7 @@ import json
 import re
 from pathlib import Path
 from llama_cpp import Llama
+from src.biotech_pipeline.utils.helpers import safe_json_load
 
 class SearchAgent:
     """
@@ -42,11 +43,11 @@ Company: "{company_name}"
         resp = self.llm(prompt, max_tokens=200, stop=["###"])
         text = resp["choices"][0]["text"]
         try:
-            data = json.loads(text)
+            data = safe_json_load(text)
         except json.JSONDecodeError:
             # Fallback: extract JSON substring
             match = re.search(r"\{.*\}", text, re.DOTALL)
-            data = json.loads(match.group()) if match else {"website": "", "founders": []}
+            data = safe_json_load(match.group()) if match else {"website": "", "founders": []}
         # Ensure keys
         data.setdefault("website", "")
         data.setdefault("founders", [])
