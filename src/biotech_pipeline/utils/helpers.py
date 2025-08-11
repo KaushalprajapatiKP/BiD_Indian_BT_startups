@@ -5,6 +5,8 @@ Common helper functions used throughout the pipeline.
 import re
 from datetime import datetime
 from urllib.parse import urlparse
+import time
+from functools import wraps
 
 def clean_text(text: str, max_length: int = None) -> str:
     """
@@ -52,3 +54,29 @@ def safe_json_load(text):
             return obj
         except Exception:
             return {"website": "", "founders": []}
+        
+
+def retry_with_backoff(max_retries: int = 3, base_delay: float = 1.0):
+    """
+    Decorator for retry logic with exponential backoff.
+    """
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            last_exception = None
+            
+            for attempt in range(max_retries + 1):
+                try:
+                    return func(*args, **kwargs)
+                except Exception as e:
+                    last_exception = e
+                    if attempt == max_retries:
+                        break
+                    
+                    delay = base_delay * (2 ** attempt)
+                    time.sleep(delay)
+            
+            # Re-raise the last exception if all retries failed
+            raise last_exception
+        return wrapper
+    return decorator

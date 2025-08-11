@@ -10,3 +10,35 @@ scraping:
 
 quality:
   threshold: 0.75
+
+
+# Main ETL pipeline configuration
+
+database:
+  host: "localhost"
+  port: 5432
+  database: "biotech_startups"
+  username: "postgres"
+  password: 
+  pool_size: 10
+  max_overflow: 20
+
+
+ 
+ai:
+  model_path: "models/llama-2-7b-chat.Q4_K_M.gguf"
+  context_size: 2048
+  max_tokens: 512
+  temperature: 0.1
+
+scraping:
+  timeout: 10            # seconds
+  max_retries: 3
+  retry_delay: 2         # seconds
+  user_agent: "BiD-ETL-Pipeline/1.0"
+
+serper_api_key: "7d095055a0a1d951eca570553f7e35c436aa31414c5b5360f0c12ff8d72de639"       # Your Serper.dev API key, or leave blank to use RSS
+
+batch_size: 10           # Number of companies to process in pilot mode
+log_level: "DEBUG"       # DEBUG, INFO, WARNING, ERROR, CRITICAL
+enable_validation: true  # Toggle full data validation step

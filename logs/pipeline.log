@@ -904,3 +904,342 @@ AttributeError: 'Company' object has no attribute 'id'
 2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP0987/BIG-15/19
 2025-08-09 20:15:08,563 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ETL pipeline finished.
 2025-08-09 20:15:08,564 | INFO    | src.biotech_pipeline.cli | ✅ ETL pipeline completed.
+2025-08-10 21:56:16,545 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-10 21:56:16,545 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-10 21:56:18,919 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-10 21:56:19,112 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-10 21:56:19,112 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:19,112 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Ezymind Healthcare Pvt Ltd: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:23,963 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:23,965 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-10 21:56:24,178 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:25,356 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:25,392 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,394 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,396 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,396 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,396 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,396 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,396 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 21:56:25,400 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Ezymind Healthcare Pvt Ltd
+2025-08-10 21:56:25,400 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-10 21:56:25,400 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:25,400 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Dreambot Pvt Ltd: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:30,901 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:31,383 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:32,472 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:32,480 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,483 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,484 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,484 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,484 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,484 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,485 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/SINE0709/BIG-23/23
+2025-08-10 21:56:32,487 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Dreambot Pvt Ltd
+2025-08-10 21:56:32,488 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-10 21:56:32,488 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:32,488 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Mabgenex Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:43,932 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:44,078 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:45,227 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:45,234 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,236 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,237 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,237 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,237 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,237 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,237 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 21:56:45,238 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Mabgenex Private Limited
+2025-08-10 21:56:45,239 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-10 21:56:45,239 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:45,239 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Cancrie Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:47,092 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:47,235 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:48,473 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:48,479 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,480 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,481 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,482 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,482 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,482 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,482 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/IKP01696/BIG-22/23
+2025-08-10 21:56:48,483 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Cancrie Private Limited
+2025-08-10 21:56:48,484 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-10 21:56:48,484 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:48,484 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Spotdot Bioinnovations Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:50,450 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:50,451 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.spotdotbiotech.com:443
+2025-08-10 21:56:50,724 | WARNING | biotech_pipeline.extractors.website_scraper | Website scrape failed (https://www.spotdotbiotech.com/): HTTPSConnectionPool(host='www.spotdotbiotech.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1337b29f0>: Failed to resolve 'www.spotdotbiotech.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-10 21:56:50,876 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:51,989 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:51,999 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,001 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,002 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,002 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,002 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,003 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,003 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/IKP01613/BIG-21/22
+2025-08-10 21:56:52,004 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Spotdot Bioinnovations Private Limited
+2025-08-10 21:56:52,004 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Flavinlabs Private Limited (BIRAC/CCAMP01917/BIG-21/22)
+2025-08-10 21:56:52,004 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:52,004 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Flavinlabs Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:55,358 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:55,514 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Flavinlabs%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:56:56,642 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:56:56,646 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,647 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,648 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,648 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,648 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,649 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,649 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 21:56:56,651 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Flavinlabs Private Limited
+2025-08-10 21:56:56,651 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Inofinity Research And Development Private Limited (BIRAC/KIIT01604/BIG-20/22)
+2025-08-10 21:56:56,652 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:56:56,652 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Inofinity Research And Development Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:56:59,105 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:56:59,106 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): inofinity.com:443
+2025-08-10 21:56:59,326 | DEBUG   | urllib3.connectionpool | https://inofinity.com:443 "GET / HTTP/1.1" 200 114
+2025-08-10 21:56:59,331 | DEBUG   | charset_normalizer | Encoding detection: ascii is most likely the one.
+2025-08-10 21:57:00,507 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Inofinity%20Research%20And%20Development%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:57:01,615 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:57:01,622 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,624 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,625 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,625 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,625 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,625 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,625 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 21:57:01,627 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Inofinity Research And Development Private Limited
+2025-08-10 21:57:01,627 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Innodx Solutions Private Limited (BIRAC/VENTURE0864/BIG-20/22)
+2025-08-10 21:57:01,627 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:57:01,628 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Innodx Solutions Private Limited: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:57:07,598 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:57:07,739 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Innodx%20Solutions%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:57:09,175 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:57:09,182 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,185 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,186 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,186 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,186 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,186 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,186 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 21:57:09,188 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Innodx Solutions Private Limited
+2025-08-10 21:57:09,188 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Ardor Biomed India Pvt Ltd (BIRAC/CCAMP01675/BIG-19/21)
+2025-08-10 21:57:09,189 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:57:09,189 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Ardor Biomed India Pvt Ltd: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 21:57:11,841 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 21:57:11,981 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ardor%20Biomed%20India%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 21:57:13,120 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 21:57:13,122 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,123 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 21:57:13,124 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Ardor Biomed India Pvt Ltd
+2025-08-10 21:57:13,124 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Cosmos Biotech Llp (BIRAC/CCAMP01624/BIG-19/21)
+2025-08-10 21:57:13,124 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 21:57:13,125 | ERROR   | src.biotech_pipeline.pipeline.etl_pipeline | AI extraction failed for Cosmos Biotech Llp: SearchAgent.find_website_and_founders() got an unexpected keyword argument 'enhanced_prompt'
+2025-08-10 22:02:08,866 | INFO    | src.biotech_pipeline.cli | ▶ Starting ETL pipeline in 'pilot' mode
+2025-08-10 22:02:08,866 | INFO    | src.biotech_pipeline.cli | Input Excel file: data/raw/company_list.xlsx
+2025-08-10 22:02:09,216 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | Reading Excel file: data/raw/company_list.xlsx
+2025-08-10 22:02:09,358 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Ezymind Healthcare Pvt Ltd (BIRAC/KIIT02236/BIG-23/23)
+2025-08-10 22:02:09,358 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:02:19,926 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:02:19,929 | DEBUG   | urllib3.connectionpool | Starting new HTTPS connection (1): www.google.com:443
+2025-08-10 22:02:20,852 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ezymind%20Healthcare%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:02:21,974 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:02:22,006 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,008 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT02236/BIG-23/23
+2025-08-10 22:02:22,012 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Ezymind Healthcare Pvt Ltd
+2025-08-10 22:02:22,012 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Dreambot Pvt Ltd (BIRAC/SINE0709/BIG-23/23)
+2025-08-10 22:02:22,012 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:02:36,109 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:02:36,277 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Dreambot%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:02:37,396 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:02:37,403 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,405 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,406 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,406 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,406 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,406 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,406 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/SINE0709/BIG-23/23
+2025-08-10 22:02:37,409 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Dreambot Pvt Ltd
+2025-08-10 22:02:37,409 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Mabgenex Private Limited (BIRAC/SIIC0882/BIG-22/23)
+2025-08-10 22:02:37,409 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:02:49,465 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:02:49,610 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mabgenex%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:02:50,729 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:02:50,735 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,738 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,739 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,740 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,740 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,740 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,740 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/SIIC0882/BIG-22/23
+2025-08-10 22:02:50,742 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Mabgenex Private Limited
+2025-08-10 22:02:50,743 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Cancrie Private Limited (BIRAC/IKP01696/BIG-22/23)
+2025-08-10 22:02:50,743 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:03:02,594 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:03:02,727 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cancrie%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:03:03,961 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:03:03,967 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,969 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,971 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,971 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,971 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,971 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,972 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/IKP01696/BIG-22/23
+2025-08-10 22:03:03,973 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Cancrie Private Limited
+2025-08-10 22:03:03,974 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Spotdot Bioinnovations Private Limited (BIRAC/IKP01613/BIG-21/22)
+2025-08-10 22:03:03,974 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:03:29,284 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:03:29,425 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Spotdot%20Bioinnovations%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:03:30,546 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:03:30,554 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,555 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,556 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,556 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,556 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,557 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,557 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/IKP01613/BIG-21/22
+2025-08-10 22:03:30,558 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Spotdot Bioinnovations Private Limited
+2025-08-10 22:03:30,559 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Flavinlabs Private Limited (BIRAC/CCAMP01917/BIG-21/22)
+2025-08-10 22:03:30,559 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:04:14,057 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:04:14,197 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Flavinlabs%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:04:15,326 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:04:15,332 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,334 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,336 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,336 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,336 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,336 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,336 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01917/BIG-21/22
+2025-08-10 22:04:15,339 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Flavinlabs Private Limited
+2025-08-10 22:04:15,339 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Inofinity Research And Development Private Limited (BIRAC/KIIT01604/BIG-20/22)
+2025-08-10 22:04:15,340 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:05:05,624 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:05:05,887 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Inofinity%20Research%20And%20Development%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:05:06,906 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:05:06,913 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,915 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,917 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,917 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,917 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,917 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,918 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT01604/BIG-20/22
+2025-08-10 22:05:06,919 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Inofinity Research And Development Private Limited
+2025-08-10 22:05:06,920 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Innodx Solutions Private Limited (BIRAC/VENTURE0864/BIG-20/22)
+2025-08-10 22:05:06,920 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:05:21,277 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:05:23,429 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Innodx%20Solutions%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:05:24,551 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:05:24,557 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,559 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,561 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,561 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,561 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,561 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,562 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/VENTURE0864/BIG-20/22
+2025-08-10 22:05:24,564 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Innodx Solutions Private Limited
+2025-08-10 22:05:24,565 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Ardor Biomed India Pvt Ltd (BIRAC/CCAMP01675/BIG-19/21)
+2025-08-10 22:05:24,565 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:06:28,414 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:06:28,577 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Ardor%20Biomed%20India%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:06:29,685 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:06:29,689 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,690 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,691 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,691 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,692 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,692 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,692 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01675/BIG-19/21
+2025-08-10 22:06:29,694 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Ardor Biomed India Pvt Ltd
+2025-08-10 22:06:29,695 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Cosmos Biotech Llp (BIRAC/CCAMP01624/BIG-19/21)
+2025-08-10 22:06:29,695 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:06:48,513 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:06:48,654 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Cosmos%20Biotech%20Llp&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:06:49,996 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:06:50,005 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,007 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,009 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01624/BIG-19/21
+2025-08-10 22:06:50,011 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Cosmos Biotech Llp
+2025-08-10 22:06:50,012 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Procyto Labs Pvt. Ltd. (BIRAC/KIIT01337/BIG-18/21)
+2025-08-10 22:06:50,012 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:07:03,350 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:07:03,508 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Procyto%20Labs%20Pvt.%20Ltd.&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:07:04,697 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:07:04,703 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,705 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,706 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,706 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,706 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,706 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,707 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT01337/BIG-18/21
+2025-08-10 22:07:04,708 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Procyto Labs Pvt. Ltd.
+2025-08-10 22:07:04,709 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Drufarm Technology Private Limited (BIRAC/VENTURE0724/BIG-18/21)
+2025-08-10 22:07:04,709 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:07:16,462 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:07:16,600 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Drufarm%20Technology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:07:18,048 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:07:18,056 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,058 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,059 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,059 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,059 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,059 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,059 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/VENTURE0724/BIG-18/21
+2025-08-10 22:07:18,061 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Drufarm Technology Private Limited
+2025-08-10 22:07:18,061 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: F3 Biotechnology Private Limited (BIRAC/KIIT01278/BIG-17/20)
+2025-08-10 22:07:18,061 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:07:33,694 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:07:33,838 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=F3%20Biotechnology%20Private%20Limited&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:07:35,021 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:07:35,028 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,030 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,031 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,031 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,031 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,031 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,031 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT01278/BIG-17/20
+2025-08-10 22:07:35,033 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed F3 Biotechnology Private Limited
+2025-08-10 22:07:35,033 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Mediklik Webhealth Pvt Ltd (BIRAC/KIIT01290/BIG-17/20)
+2025-08-10 22:07:35,033 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:07:47,864 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:07:48,018 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Mediklik%20Webhealth%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:07:49,149 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:07:49,158 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,160 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,161 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,161 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,161 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,161 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,161 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/KIIT01290/BIG-17/20
+2025-08-10 22:07:49,163 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Mediklik Webhealth Pvt Ltd
+2025-08-10 22:07:49,163 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Wide Mobility Mechatronics Pvt Ltd (BIRAC/CCAMP01155/BIG-16/20)
+2025-08-10 22:07:49,163 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...
+2025-08-10 22:08:48,834 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🌐 Phase 2: Running specialized extractors...
+2025-08-10 22:08:48,978 | DEBUG   | urllib3.connectionpool | https://www.google.com:443 "GET /search?q=Wide%20Mobility%20Mechatronics%20Pvt%20Ltd&tbm=nws HTTP/1.1" 200 None
+2025-08-10 22:08:50,333 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 💾 Phase 3: Preparing and loading data...
+2025-08-10 22:08:50,338 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 1 companies. Last big_award_id=BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,339 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 people for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,341 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 products for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,341 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 patents for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,341 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 publications for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,341 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 news articles for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,341 | INFO    | biotech_pipeline.loaders.postgress_loader | Loaded 0 funding rounds for BIRAC/CCAMP01155/BIG-16/20
+2025-08-10 22:08:50,343 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | ✅ Successfully processed Wide Mobility Mechatronics Pvt Ltd
+2025-08-10 22:08:50,343 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🔍 Processing company: Loopworm Private Limited (BIRAC/IKP01199/BIG-16/20)
+2025-08-10 22:08:50,343 | INFO    | src.biotech_pipeline.pipeline.etl_pipeline | 🤖 Phase 1: AI agent extracting comprehensive company intelligence...

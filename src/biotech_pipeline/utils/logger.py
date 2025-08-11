@@ -1,37 +1,73 @@
 """
-Sets up a simple console + file logger with optional debug mode.
+Logger helper for the ETL pipeline.
+
+This module assumes that logging is fully configured from an external
+logging configuration file (e.g., config/logging.yaml) loaded at application startup.
+
+Enhancements:
+- Adds `log_validation()` for validation-specific structured logging.
+- Keeps `log_execution_time` decorator for performance measurement.
 """
 
-import os
+
 import logging
-from pathlib import Path
+import time
+from functools import wraps
+from typing import Optional, List, Dict, Any
 
-LOG_FILE = os.getenv("LOG_FILE", "logs/pipeline.log")
 
-def setup_logger(verbose: bool = False) -> logging.Logger:
-    """
-    Configure root logger:
-      - Console handler (INFO or DEBUG)
-      - File handler (always DEBUG)
-    Returns the root logger.
-    """
-    # Ensure log directory exists
-    Path(LOG_FILE).parent.mkdir(parents=True, exist_ok=True)
+class ETLLoggerAdapter(logging.LoggerAdapter):
+    """Logger adapter that adds ETL-specific convenience methods."""
 
-    level = logging.DEBUG if verbose else logging.INFO
-    fmt = "%(asctime)s | %(levelname)-7s | %(name)s | %(message)s"
+    ### CHANGE: Ensure kwargs are preserved in all messages
+    def process(self, msg, kwargs):
+        return msg, kwargs
 
-    # Console handler
-    ch = logging.StreamHandler()
-    ch.setLevel(level)
-    ch.setFormatter(logging.Formatter(fmt))
+    def log_validation(
+        self,
+        entity: str,
+        passed: bool,
+        errors: Optional[List[str]] = None,
+        warnings: Optional[List[str]] = None,
+        quality_scores: Optional[Dict[str, Any]] = None,
+    ):
+        """Log validation results in a unified format."""
+        status = "PASSED" if passed else "FAILED"
+        self.info(
+            f"Validation for {entity}: {status} | "
+            f"errors={len(errors or [])}, warnings={len(warnings or [])}, "
+            f"quality_scores={quality_scores}"
+        )
 
-    # File handler
-    fh = logging.FileHandler(LOG_FILE)
-    fh.setLevel(logging.DEBUG)
-    fh.setFormatter(logging.Formatter(fmt))
 
-    logger = logging.getLogger()  # root logger
-    logger.setLevel(logging.DEBUG)
-    logger.handlers = [ch, fh]
-    return logger
+def get_logger(name: str) -> ETLLoggerAdapter:
+    """Always return ETLLoggerAdapter so .log_validation exists."""
+    base_logger = logging.getLogger(name)
+    if not isinstance(base_logger, ETLLoggerAdapter):
+        return ETLLoggerAdapter(base_logger, {})
+    return base_logger
+
+
+def log_execution_time(logger_instance: Optional[logging.Logger] = None):
+    """Decorator to log function execution time."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            func_logger = logger_instance or get_logger(func.__module__)
+            start_time = time.time()
+            try:
+                result = func(*args, **kwargs)
+                func_logger.info(
+                    f"Operation completed: {func.__module__}.{func.__name__} "
+                    f"(duration: {time.time() - start_time:.3f}s)"
+                )
+                return result
+            except Exception as e:
+                func_logger.error(
+                    f"Operation failed: {func.__module__}.{func.__name__} "
+                    f"(duration: {time.time() - start_time:.3f}s) - Error: {e}",
+                    exc_info=True
+                )
+                raise
+        return wrapper
+    return decorator

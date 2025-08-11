@@ -52,6 +52,7 @@ pipx install uv
 
 ```bash
 uv venv
+
 ```
 
 ### 3. Activate the Virtual Environment
