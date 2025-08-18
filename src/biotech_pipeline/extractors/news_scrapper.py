@@ -10,10 +10,10 @@ from typing import List, Dict, Optional
 
 from src.biotech_pipeline.extractors.base_extractor import BaseExtractor, retry_on_exception
 from src.biotech_pipeline.utils.exceptions import NetworkError
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import get_scraping_logger
 from src.biotech_pipeline.utils.config import config_manager
 
-logger = get_logger(__name__)
+logger = get_scraping_logger()
 cfg = config_manager.load_config().scraping
 
 

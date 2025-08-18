@@ -7,9 +7,9 @@ from typing import Callable, Any, Dict
 from functools import wraps
 
 from src.biotech_pipeline.utils.exceptions import ExtractionError, NetworkError
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import get_scraping_logger, get_error_logger
 
-logger = get_logger(__name__)
+logger = get_scraping_logger()
 
 
 def retry_on_exception(
@@ -29,7 +29,8 @@ def retry_on_exception(
                 except exceptions as e:
                     retries += 1
                     if retries > max_retries:
-                        logger.error(f"Max retries exceeded for {func.__name__}: {e}")
+                        error_logger = get_error_logger("extraction_errors")
+                        error_logger.error(f"Max retries exceeded for {func.__name__}: {e}", exc_info=True)
                         raise ExtractionError(
                             f"{func.__name__} failed after {max_retries} retries",
                             source=func.__name__,

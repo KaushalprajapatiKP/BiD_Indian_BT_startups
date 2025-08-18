@@ -5,9 +5,9 @@ Data Cleaning and Transformation Utilities
 import re
 from datetime import datetime
 from typing import Dict, Any, List, Optional
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import get_scraping_logger
 from src.biotech_pipeline.utils.config import config_manager
-logger = get_logger(__name__)
+logger = get_scraping_logger()
 cfg = config_manager.load_config().scraping
 
 def clean_company_name(name: str) -> str:

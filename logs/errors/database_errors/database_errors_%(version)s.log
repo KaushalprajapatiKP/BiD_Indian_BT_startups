@@ -1,0 +1,92 @@
+2025-08-17 12:03:47,176 | [RUN_20250817_120346] | biotech_pipeline.database | ERROR | [exporter.py:39] | export_tables_to_excel() | Failed to export Excel file data/raw/company_list.xlsx: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:05:35,282 | [RUN_20250817_120534] | biotech_pipeline.database | ERROR | [exporter.py:39] | export_tables_to_excel() | Failed to export Excel file data/raw/company_list.xlsx: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:07:28,255 | [RUN_20250817_120727] | biotech_pipeline.database | ERROR | [exporter.py:53] | export_tables_to_excel() | Failed to export Excel file data/raw/company_list.xlsx
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 43, in export_tables_to_excel
+    df.to_excel(writer, sheet_name=table_name, index=False)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 2436, in to_excel
+    formatter.write(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 952, in write
+    writer._write_cells(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 486, in _write_cells
+    for cell in cells:
+                ^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 890, in get_formatted_cells
+    cell.val = self._format_value(cell.val)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 607, in _format_value
+    raise ValueError(
+ValueError: Excel does not support datetimes with timezones. Please ensure that datetimes are timezone unaware before writing to Excel.

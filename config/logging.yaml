@@ -1,9 +1,26 @@
 version: 1
 disable_existing_loggers: false
 
+filters:
+  version_filter:
+    (): src.biotech_pipeline.utils.logger.VersionFilter
+
 formatters:
   standard:
-    format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+    format: "%(asctime)s | [%(version)s] | %(name)s | %(levelname)s | %(message)s"
+    # Apply the version filter to ensure %(version)s is present
+  detailed:
+    format: "%(asctime)s | [%(version)s] | %(name)s | %(levelname)s | [%(filename)s:%(lineno)d] | %(message)s"
+  error_format:
+    format: "%(asctime)s | [%(version)s] | %(name)s | %(levelname)s | [%(filename)s:%(lineno)d] | %(funcName)s() | %(message)s"
+  pipeline_format:
+    format: "%(asctime)s | [%(version)s] | PIPELINE | %(levelname)s | %(message)s"
+  database_format:
+    format: "%(asctime)s | [%(version)s] | DATABASE | %(levelname)s | %(message)s"
+  scraping_format:
+    format: "%(asctime)s | [%(version)s] | SCRAPING | %(levelname)s | %(message)s"
+  validation_format:
+    format: "%(asctime)s | [%(version)s] | VALIDATION | %(levelname)s | %(message)s"
 
 handlers:
   console:
@@ -11,26 +28,137 @@ handlers:
     level: INFO
     formatter: standard
     stream: ext://sys.stdout
+    filters: [version_filter]
 
-  file:
+  pipeline_file:
     class: logging.handlers.RotatingFileHandler
     level: DEBUG
-    formatter: standard
-    filename: logs/etl_pipeline.log
+    formatter: pipeline_format
+    filename: logs/pipeline/pipeline_%(version)s.log
     maxBytes: 10485760
     backupCount: 5
+    filters: [version_filter]
 
-  errors:
+  database_file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: database_format
+    filename: logs/database/database_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  scraping_file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: scraping_format
+    filename: logs/scaping/scraping_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  validation_file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: validation_format
+    filename: logs/validation/validation_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  validation_errors:
     class: logging.handlers.RotatingFileHandler
     level: ERROR
-    formatter: standard
-    filename: logs/errors.log
+    formatter: error_format
+    filename: logs/errors/validation_errors/validation_errors_%(version)s.log
     maxBytes: 10485760
     backupCount: 5
+    filters: [version_filter]
+
+  database_errors:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: error_format
+    filename: logs/errors/database_errors/database_errors_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  extraction_errors:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: error_format
+    filename: logs/errors/extraction_errors/extraction_errors_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  pipeline_errors:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: error_format
+    filename: logs/errors/pipeline_errors/pipeline_errors_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 5
+    filters: [version_filter]
+
+  critical_errors:
+    class: logging.handlers.RotatingFileHandler
+    level: CRITICAL
+    formatter: error_format
+    filename: logs/errors/critical_errors/critical_errors_%(version)s.log
+    maxBytes: 10485760
+    backupCount: 3
+    filters: [version_filter]
 
 loggers:
+  biotech_pipeline.pipeline:
+    handlers: [console, pipeline_file, pipeline_errors]
+    level: DEBUG
+    propagate: false
+
+  biotech_pipeline.database:
+    handlers: [console, database_file, database_errors]
+    level: DEBUG
+    propagate: false
+
+  biotech_pipeline.scraping:
+    handlers: [console, scraping_file, extraction_errors]
+    level: DEBUG
+    propagate: false
+
+  biotech_pipeline.validation:
+    handlers: [console, validation_file, validation_errors]
+    level: DEBUG
+    propagate: false
+
+  biotech_pipeline.errors.validation_errors:
+    handlers: [console, validation_errors]
+    level: ERROR
+    propagate: false
+
+  biotech_pipeline.errors.database_errors:
+    handlers: [console, database_errors]
+    level: ERROR
+    propagate: false
+
+  biotech_pipeline.errors.extraction_errors:
+    handlers: [console, extraction_errors]
+    level: ERROR
+    propagate: false
+
+  biotech_pipeline.errors.pipeline_errors:
+    handlers: [console, pipeline_errors]
+    level: ERROR
+    propagate: false
+
+  biotech_pipeline.errors.critical_errors:
+    handlers: [console, critical_errors]
+    level: CRITICAL
+    propagate: false
+
   src.biotech_pipeline:
-    handlers: [console, file, errors]
+    handlers: [console, pipeline_file]
     level: DEBUG
     propagate: false
 

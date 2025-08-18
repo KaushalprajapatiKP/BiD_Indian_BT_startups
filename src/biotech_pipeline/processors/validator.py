@@ -9,9 +9,9 @@ from dataclasses import dataclass
 from enum import Enum
 
 from src.biotech_pipeline.utils.exceptions import ValidationError
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import get_validation_logger
 
-logger = get_logger(__name__)
+logger = get_validation_logger()
 
 class ValidationSeverity(Enum):
     """Validation error severity levels."""

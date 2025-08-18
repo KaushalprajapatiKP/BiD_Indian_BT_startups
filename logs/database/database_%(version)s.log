@@ -1,0 +1,191 @@
+2025-08-17 11:51:17,869 | [RUN_20250817_115117] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 11:52:05,214 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:52:05,215 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:52:05,219 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/KIIT02236/BIG-23/23
+2025-08-17 11:52:05,219 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:52:05,222 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/KIIT02236/BIG-23/23
+2025-08-17 11:52:05,222 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/KIIT02236/BIG-23/23: 2 total records
+2025-08-17 11:52:53,829 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:52:53,829 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:52:53,832 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/SINE0709/BIG-23/23
+2025-08-17 11:52:53,832 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:52:53,834 | [RUN_20250817_115117] | DATABASE | INFO | News coverage loaded: 1 for BIRAC/SINE0709/BIG-23/23
+2025-08-17 11:52:53,835 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=news_coverage, records=1
+2025-08-17 11:52:53,836 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/SINE0709/BIG-23/23
+2025-08-17 11:52:53,836 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/SINE0709/BIG-23/23: 3 total records
+2025-08-17 11:53:42,266 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:53:42,266 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:53:42,268 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/SIIC0882/BIG-22/23
+2025-08-17 11:53:42,269 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:53:42,270 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/SIIC0882/BIG-22/23
+2025-08-17 11:53:42,270 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/SIIC0882/BIG-22/23: 2 total records
+2025-08-17 11:54:45,679 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:54:45,679 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:54:45,682 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/IKP01696/BIG-22/23
+2025-08-17 11:54:45,682 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:54:45,687 | [RUN_20250817_115117] | DATABASE | INFO | News coverage loaded: 5 for BIRAC/IKP01696/BIG-22/23
+2025-08-17 11:54:45,688 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=news_coverage, records=5
+2025-08-17 11:54:45,689 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/IKP01696/BIG-22/23
+2025-08-17 11:54:45,689 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/IKP01696/BIG-22/23: 7 total records
+2025-08-17 11:55:32,454 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:55:32,454 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:55:32,457 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/IKP01613/BIG-21/22
+2025-08-17 11:55:32,457 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:55:32,458 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/IKP01613/BIG-21/22
+2025-08-17 11:55:32,458 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/IKP01613/BIG-21/22: 2 total records
+2025-08-17 11:56:18,426 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:56:18,427 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:56:18,430 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/CCAMP01917/BIG-21/22
+2025-08-17 11:56:18,430 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:56:18,432 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/CCAMP01917/BIG-21/22
+2025-08-17 11:56:18,432 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/CCAMP01917/BIG-21/22: 2 total records
+2025-08-17 11:57:06,354 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:57:06,355 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:57:06,357 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/KIIT01604/BIG-20/22
+2025-08-17 11:57:06,357 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:57:06,358 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/KIIT01604/BIG-20/22
+2025-08-17 11:57:06,359 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/KIIT01604/BIG-20/22: 2 total records
+2025-08-17 11:57:52,157 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:57:52,157 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:57:52,159 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/VENTURE0864/BIG-20/22
+2025-08-17 11:57:52,159 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:57:52,161 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/VENTURE0864/BIG-20/22
+2025-08-17 11:57:52,161 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/VENTURE0864/BIG-20/22: 2 total records
+2025-08-17 11:58:39,976 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:58:39,976 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:58:39,979 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/CCAMP01675/BIG-19/21
+2025-08-17 11:58:39,979 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:58:39,980 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/CCAMP01675/BIG-19/21
+2025-08-17 11:58:39,980 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/CCAMP01675/BIG-19/21: 2 total records
+2025-08-17 11:59:29,896 | [RUN_20250817_115117] | DATABASE | INFO | Companies upserted: 1
+2025-08-17 11:59:29,896 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=companies, records=1
+2025-08-17 11:59:29,898 | [RUN_20250817_115117] | DATABASE | INFO | People loaded: 1 for BIRAC/CCAMP01624/BIG-19/21
+2025-08-17 11:59:29,898 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=people, records=1
+2025-08-17 11:59:29,901 | [RUN_20250817_115117] | DATABASE | INFO | News coverage loaded: 2 for BIRAC/CCAMP01624/BIG-19/21
+2025-08-17 11:59:29,901 | [RUN_20250817_115117] | DATABASE | INFO | DB INSERT successful | table=news_coverage, records=2
+2025-08-17 11:59:29,903 | [RUN_20250817_115117] | DATABASE | INFO | Extraction log saved for BIRAC/CCAMP01624/BIG-19/21
+2025-08-17 11:59:29,903 | [RUN_20250817_115117] | DATABASE | INFO | All data loaded successfully for BIRAC/CCAMP01624/BIG-19/21: 4 total records
+2025-08-17 11:59:48,190 | [RUN_20250817_115947] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:01:33,585 | [RUN_20250817_120133] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:03:46,828 | [RUN_20250817_120346] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:03:47,176 | [RUN_20250817_120346] | DATABASE | ERROR | Failed to export Excel file data/raw/company_list.xlsx: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:05:35,000 | [RUN_20250817_120534] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:05:35,282 | [RUN_20250817_120534] | DATABASE | ERROR | Failed to export Excel file data/raw/company_list.xlsx: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:07:27,953 | [RUN_20250817_120727] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:07:28,238 | [RUN_20250817_120727] | DATABASE | INFO | Exporting sheet 'companies' with SQL: SELECT * FROM companies
+2025-08-17 12:07:28,255 | [RUN_20250817_120727] | DATABASE | ERROR | Failed to export Excel file data/raw/company_list.xlsx
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 43, in export_tables_to_excel
+    df.to_excel(writer, sheet_name=table_name, index=False)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 2436, in to_excel
+    formatter.write(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 952, in write
+    writer._write_cells(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 486, in _write_cells
+    for cell in cells:
+                ^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 890, in get_formatted_cells
+    cell.val = self._format_value(cell.val)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 607, in _format_value
+    raise ValueError(
+ValueError: Excel does not support datetimes with timezones. Please ensure that datetimes are timezone unaware before writing to Excel.
+2025-08-17 12:08:20,006 | [RUN_20250817_120819] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-17 12:08:20,336 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'companies' with SQL: SELECT * FROM companies
+2025-08-17 12:08:20,341 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'people' with SQL: SELECT * FROM people
+2025-08-17 12:08:20,344 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'products_services' with SQL: SELECT * FROM products_services
+2025-08-17 12:08:20,347 | [RUN_20250817_120819] | DATABASE | WARNING | No data for table 'products_services', skipping sheet
+2025-08-17 12:08:20,347 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'patents' with SQL: SELECT * FROM patents
+2025-08-17 12:08:20,349 | [RUN_20250817_120819] | DATABASE | WARNING | No data for table 'patents', skipping sheet
+2025-08-17 12:08:20,349 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'publications' with SQL: SELECT * FROM publications
+2025-08-17 12:08:20,350 | [RUN_20250817_120819] | DATABASE | WARNING | No data for table 'publications', skipping sheet
+2025-08-17 12:08:20,350 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'funding_rounds' with SQL: SELECT * FROM funding_rounds
+2025-08-17 12:08:20,351 | [RUN_20250817_120819] | DATABASE | WARNING | No data for table 'funding_rounds', skipping sheet
+2025-08-17 12:08:20,351 | [RUN_20250817_120819] | DATABASE | INFO | Exporting sheet 'news_coverage' with SQL: SELECT * FROM news_coverage
+2025-08-17 12:08:20,358 | [RUN_20250817_120819] | DATABASE | INFO | Exported Excel file successfully: data/raw/company_list.xlsx
+2025-08-18 21:29:55,590 | [RUN_20250818_212955] | DATABASE | INFO | Database schema created/verified successfully
+2025-08-18 21:29:58,087 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'companies' with SQL: SELECT * FROM companies
+2025-08-18 21:29:58,096 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'people' with SQL: SELECT * FROM people
+2025-08-18 21:29:58,099 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'products_services' with SQL: SELECT * FROM products_services
+2025-08-18 21:29:58,101 | [RUN_20250818_212955] | DATABASE | WARNING | No data for table 'products_services', skipping sheet
+2025-08-18 21:29:58,101 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'patents' with SQL: SELECT * FROM patents
+2025-08-18 21:29:58,102 | [RUN_20250818_212955] | DATABASE | WARNING | No data for table 'patents', skipping sheet
+2025-08-18 21:29:58,102 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'publications' with SQL: SELECT * FROM publications
+2025-08-18 21:29:58,104 | [RUN_20250818_212955] | DATABASE | WARNING | No data for table 'publications', skipping sheet
+2025-08-18 21:29:58,104 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'funding_rounds' with SQL: SELECT * FROM funding_rounds
+2025-08-18 21:29:58,105 | [RUN_20250818_212955] | DATABASE | WARNING | No data for table 'funding_rounds', skipping sheet
+2025-08-18 21:29:58,105 | [RUN_20250818_212955] | DATABASE | INFO | Exporting sheet 'news_coverage' with SQL: SELECT * FROM news_coverage
+2025-08-18 21:29:58,113 | [RUN_20250818_212955] | DATABASE | INFO | Exported Excel file successfully: data/processed/final_data.xlsx

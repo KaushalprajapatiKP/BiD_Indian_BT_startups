@@ -1,0 +1,171 @@
+2025-08-17 11:51:17,845 | [RUN_20250817_115117] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_115117
+2025-08-17 11:51:18,253 | [RUN_20250817_115117] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_115117
+2025-08-17 11:51:18,254 | [RUN_20250817_115117] | PIPELINE | INFO | Starting ETL run: pilot mode | Version: RUN_20250817_115117
+2025-08-17 11:51:18,411 | [RUN_20250817_115117] | PIPELINE | INFO | Pipeline run initialized with 10 companies to process
+2025-08-17 11:51:18,412 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 1/10 (10.0%) | Current: Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:46,474 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 28.062s)
+2025-08-17 11:52:05,186 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:52:05,187 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:52:05,222 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/KIIT02236/BIG-23/23
+2025-08-17 11:52:05,223 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 2/10 (20.0%) | Current: Dreambot Pvt Ltd
+2025-08-17 11:52:34,079 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 28.856s)
+2025-08-17 11:52:53,825 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Dreambot Pvt Ltd
+2025-08-17 11:52:53,825 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.000s)
+2025-08-17 11:52:53,836 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/SINE0709/BIG-23/23
+2025-08-17 11:52:53,836 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 3/10 (30.0%) | Current: Mabgenex Private Limited
+2025-08-17 11:53:23,534 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 29.698s)
+2025-08-17 11:53:42,260 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Mabgenex Private Limited
+2025-08-17 11:53:42,261 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.000s)
+2025-08-17 11:53:42,270 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/SIIC0882/BIG-22/23
+2025-08-17 11:53:42,271 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 4/10 (40.0%) | Current: Cancrie Private Limited
+2025-08-17 11:54:08,012 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 25.741s)
+2025-08-17 11:54:45,674 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Cancrie Private Limited
+2025-08-17 11:54:45,675 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:54:45,689 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/IKP01696/BIG-22/23
+2025-08-17 11:54:45,690 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 5/10 (50.0%) | Current: Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:13,884 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 28.195s)
+2025-08-17 11:55:32,448 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:32,449 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:55:32,458 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/IKP01613/BIG-21/22
+2025-08-17 11:55:32,459 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 6/10 (60.0%) | Current: FlavinLabs Private Limited 
+2025-08-17 11:55:58,421 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 25.962s)
+2025-08-17 11:56:18,422 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for FlavinLabs Private Limited 
+2025-08-17 11:56:18,423 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:56:18,432 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/CCAMP01917/BIG-21/22
+2025-08-17 11:56:18,432 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 7/10 (70.0%) | Current: Inofinity Research and Development Private Limited
+2025-08-17 11:56:45,803 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 27.371s)
+2025-08-17 11:57:06,346 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Inofinity Research and Development Private Limited
+2025-08-17 11:57:06,347 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:57:06,359 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/KIIT01604/BIG-20/22
+2025-08-17 11:57:06,359 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 8/10 (80.0%) | Current:  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:32,711 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 26.352s)
+2025-08-17 11:57:52,151 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:52,152 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:57:52,161 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/VENTURE0864/BIG-20/22
+2025-08-17 11:57:52,161 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 9/10 (90.0%) | Current: Ardor Biomed India PVT LTD
+2025-08-17 11:58:18,567 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 26.405s)
+2025-08-17 11:58:39,972 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for Ardor Biomed India PVT LTD
+2025-08-17 11:58:39,972 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.000s)
+2025-08-17 11:58:39,980 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/CCAMP01675/BIG-19/21
+2025-08-17 11:58:39,980 | [RUN_20250817_115117] | PIPELINE | INFO | Processing progress: 10/10 (100.0%) | Current: COSMOS Biotech LLP
+2025-08-17 11:59:09,200 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.search_agent.extract_company_profile (duration: 29.219s)
+2025-08-17 11:59:29,891 | [RUN_20250817_115117] | PIPELINE | INFO | Data processing completed for COSMOS Biotech LLP
+2025-08-17 11:59:29,892 | [RUN_20250817_115117] | PIPELINE | INFO | Operation completed: src.biotech_pipeline.agents.validation_agent.validate_complete_profile (duration: 0.001s)
+2025-08-17 11:59:29,903 | [RUN_20250817_115117] | PIPELINE | INFO | ETL completed successfully for BIRAC/CCAMP01624/BIG-19/21
+2025-08-17 11:59:29,903 | [RUN_20250817_115117] | PIPELINE | INFO | ETL run completed | Version: RUN_20250817_115117 | Summary: 10 successful, 0 failed, 0 validation failures
+2025-08-17 11:59:48,169 | [RUN_20250817_115947] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_115947
+2025-08-17 11:59:48,500 | [RUN_20250817_115947] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_115947
+2025-08-17 12:01:33,564 | [RUN_20250817_120133] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_120133
+2025-08-17 12:01:34,357 | [RUN_20250817_120133] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_120133
+2025-08-17 12:03:46,807 | [RUN_20250817_120346] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_120346
+2025-08-17 12:03:47,108 | [RUN_20250817_120346] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_120346
+2025-08-17 12:03:47,178 | [RUN_20250817_120346] | PIPELINE | CRITICAL | Data export failed: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/cli.py", line 89, in main
+    export_tables_to_excel(output_file, export_cfg.tables)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:05:34,980 | [RUN_20250817_120534] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_120534
+2025-08-17 12:05:35,252 | [RUN_20250817_120534] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_120534
+2025-08-17 12:05:35,283 | [RUN_20250817_120534] | PIPELINE | CRITICAL | Data export failed: At least one sheet must be visible
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 28, in export_tables_to_excel
+    for sheet_name, query in table_queries.items():
+                             ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/cli.py", line 89, in main
+    export_tables_to_excel(output_file, export_cfg.tables)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 27, in export_tables_to_excel
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1353, in __exit__
+    self.close()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1357, in close
+    self._save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 110, in _save
+    self.book.save(self._handles.handle)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/workbook.py", line 386, in save
+    save_workbook(self, filename)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 294, in save_workbook
+    writer.save()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 275, in save
+    self.write_data()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/writer/excel.py", line 89, in write_data
+    archive.writestr(ARC_WORKBOOK, writer.write())
+                                   ^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 150, in write
+    self.write_views()
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 137, in write_views
+    active = get_active_sheet(self.wb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/openpyxl/workbook/_writer.py", line 35, in get_active_sheet
+    raise IndexError("At least one sheet must be visible")
+IndexError: At least one sheet must be visible
+2025-08-17 12:07:27,931 | [RUN_20250817_120727] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_120727
+2025-08-17 12:07:28,207 | [RUN_20250817_120727] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_120727
+2025-08-17 12:07:28,257 | [RUN_20250817_120727] | PIPELINE | CRITICAL | Data export failed: Excel does not support datetimes with timezones. Please ensure that datetimes are timezone unaware before writing to Excel.
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/cli.py", line 89, in main
+    export_tables_to_excel(output_file, export_cfg.tables)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/utils/exporter.py", line 43, in export_tables_to_excel
+    df.to_excel(writer, sheet_name=table_name, index=False)
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 2436, in to_excel
+    formatter.write(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 952, in write
+    writer._write_cells(
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 486, in _write_cells
+    for cell in cells:
+                ^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 890, in get_formatted_cells
+    cell.val = self._format_value(cell.val)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/.venv/lib/python3.12/site-packages/pandas/io/formats/excel.py", line 607, in _format_value
+    raise ValueError(
+ValueError: Excel does not support datetimes with timezones. Please ensure that datetimes are timezone unaware before writing to Excel.
+2025-08-17 12:08:19,984 | [RUN_20250817_120819] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250817_120819
+2025-08-17 12:08:20,285 | [RUN_20250817_120819] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250817_120819
+2025-08-18 21:29:55,565 | [RUN_20250818_212955] | PIPELINE | INFO | ETL Orchestrator initializing | Version: RUN_20250818_212955
+2025-08-18 21:29:58,024 | [RUN_20250818_212955] | PIPELINE | INFO | ETL Orchestrator initialized successfully | Version: RUN_20250818_212955

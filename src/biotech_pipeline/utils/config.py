@@ -46,7 +46,7 @@ Configuration management with environment variable support and validation.
 import os
 import yaml
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 from dataclasses import dataclass
 
 from src.biotech_pipeline.utils.exceptions import ConfigurationError
@@ -83,6 +83,10 @@ class ScrapingConfig:
 
 
 @dataclass
+class ExportConfig:
+    tables: List[str]
+
+@dataclass
 class PipelineConfig:
     """Main pipeline configuration."""
     database: DatabaseConfig
@@ -92,6 +96,7 @@ class PipelineConfig:
     batch_size: int = 10
     log_level: str = "INFO"
     enable_validation: bool = True
+    export: Optional[ExportConfig] = None
 
 
 class ConfigManager:
@@ -162,12 +167,15 @@ class ConfigManager:
         current[keys[-1]] = value
     
     def _create_config(self, raw_config: Dict[str, Any]) -> PipelineConfig:
-        """Create typed configuration object."""
         try:
             database_config = DatabaseConfig(**raw_config['database'])
             ai_config = AIConfig(**raw_config['ai'])
             scraping_config = ScrapingConfig(**raw_config.get('scraping', {}))
-            
+
+            export_config = None
+            if 'export' in raw_config:
+                export_config = ExportConfig(**raw_config['export'])
+
             return PipelineConfig(
                 database=database_config,
                 ai=ai_config,
@@ -175,12 +183,14 @@ class ConfigManager:
                 serper_api_key=raw_config.get('serper_api_key'),
                 batch_size=raw_config.get('batch_size', 10),
                 log_level=raw_config.get('log_level', 'INFO'),
-                enable_validation=raw_config.get('enable_validation', True)
+                enable_validation=raw_config.get('enable_validation', True),
+                export=export_config
             )
         except KeyError as e:
             raise ConfigurationError(f"Missing required configuration: {e}")
         except TypeError as e:
             raise ConfigurationError(f"Invalid configuration format: {e}")
+
 
 
 # Global configuration instance

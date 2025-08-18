@@ -10,10 +10,10 @@ from src.biotech_pipeline.processors.data_cleaner import (
     clean_company_name, clean_url, parse_founders, parse_date,
     extract_location, validate_cin, parse_funding_amount
 )
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import get_scraping_logger
 from src.biotech_pipeline.utils.exceptions import TransformationError
 
-logger = get_logger(__name__)
+logger = get_scraping_logger()
 
 
 class DataProcessor:

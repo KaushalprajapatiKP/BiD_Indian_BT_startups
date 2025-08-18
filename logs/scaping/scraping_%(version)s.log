@@ -1,0 +1,313 @@
+2025-08-17 11:51:17,869 | [RUN_20250817_115117] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 11:51:18,253 | [RUN_20250817_115117] | SCRAPING | INFO | Model loaded successfully in 0.38s
+2025-08-17 11:51:18,412 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Ezymind Healthcare Pvt Ltd
+2025-08-17 11:51:46,472 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.ezymindhealthcare.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_t...
+2025-08-17 11:51:46,473 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Ezymind Healthcare Pvt Ltd: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:51:46,473 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Ezymind Healthcare Pvt Ltd
+2025-08-17 11:51:46,474 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:46,478 | [RUN_20250817_115117] | SCRAPING | ERROR | WebsiteExtractor network error: HTTPSConnectionPool(host='www.ezymindhealthcare.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10e3fb5c0>: Failed to resolve 'www.ezymindhealthcare.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-17 11:51:46,478 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ezymind Healthcare Pvt Ltd  | type=website, records=6
+2025-08-17 11:51:46,478 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:47,274 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:48,186 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Ezymind Healthcare Pvt Ltd : 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Ezymind%20Healthcare%20Pvt%20Ltd%20
+2025-08-17 11:51:48,186 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:48,186 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ezymind Healthcare Pvt Ltd  | type=web_data, records=0
+2025-08-17 11:51:48,187 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:51:48,833 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:51:51,473 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:51:55,687 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:52:04,317 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Ezymind Healthcare Pvt Ltd , falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:52:04,318 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Ezymind Healthcare Pvt Ltd 
+2025-08-17 11:52:05,185 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ezymind Healthcare Pvt Ltd  | type=news, records=0
+2025-08-17 11:52:05,185 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:52:05,223 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Dreambot Pvt Ltd
+2025-08-17 11:52:34,078 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.dreambot.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "CEO",
+            "role_type": "Founder"
+        }
+   ...
+2025-08-17 11:52:34,079 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Dreambot Pvt Ltd: quality_score=1.11, extracted_fields=10, total_fields=9
+2025-08-17 11:52:34,079 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Dreambot Pvt Ltd
+2025-08-17 11:52:34,079 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Dreambot Pvt Ltd
+2025-08-17 11:52:35,213 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Dreambot Pvt Ltd | type=website, records=6
+2025-08-17 11:52:35,213 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Dreambot Pvt Ltd
+2025-08-17 11:52:35,896 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Dreambot Pvt Ltd
+2025-08-17 11:52:36,797 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Dreambot Pvt Ltd: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Dreambot%20Pvt%20Ltd
+2025-08-17 11:52:36,798 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Dreambot Pvt Ltd
+2025-08-17 11:52:36,798 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Dreambot Pvt Ltd | type=web_data, records=0
+2025-08-17 11:52:36,798 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Dreambot Pvt Ltd
+2025-08-17 11:52:37,439 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:52:39,673 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:52:44,402 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:52:53,105 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Dreambot Pvt Ltd, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:52:53,105 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Dreambot Pvt Ltd
+2025-08-17 11:52:53,824 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Dreambot Pvt Ltd | type=news, records=1
+2025-08-17 11:52:53,825 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:52:53,836 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Mabgenex Private Limited
+2025-08-17 11:53:23,534 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.mabgenex.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_type": "Fo...
+2025-08-17 11:53:23,534 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Mabgenex Private Limited: quality_score=1.11, extracted_fields=10, total_fields=9
+2025-08-17 11:53:23,534 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Mabgenex Private Limited
+2025-08-17 11:53:23,534 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Mabgenex Private Limited
+2025-08-17 11:53:23,732 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Mabgenex Private Limited | type=website, records=6
+2025-08-17 11:53:23,732 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Mabgenex Private Limited
+2025-08-17 11:53:24,722 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Mabgenex Private Limited
+2025-08-17 11:53:25,875 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Mabgenex Private Limited: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Mabgenex%20Private%20Limited
+2025-08-17 11:53:25,876 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Mabgenex Private Limited
+2025-08-17 11:53:25,876 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Mabgenex Private Limited | type=web_data, records=0
+2025-08-17 11:53:25,876 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Mabgenex Private Limited
+2025-08-17 11:53:26,493 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:53:28,738 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:53:32,960 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:53:41,596 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Mabgenex Private Limited, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:53:41,596 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Mabgenex Private Limited
+2025-08-17 11:53:42,260 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Mabgenex Private Limited | type=news, records=0
+2025-08-17 11:53:42,260 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:53:42,271 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Cancrie Private Limited
+2025-08-17 11:54:08,011 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.cancrie.com",
+    "founders": [
+        {
+            "full_name": "John Doe",
+            "designation": "CEO",
+            "role_type": "Founder"
+        }
+    ],
+...
+2025-08-17 11:54:08,012 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Cancrie Private Limited: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:54:08,012 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Cancrie Private Limited
+2025-08-17 11:54:08,012 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Cancrie Private Limited
+2025-08-17 11:54:28,096 | [RUN_20250817_115117] | SCRAPING | ERROR | WebsiteExtractor network error: HTTPSConnectionPool(host='www.cancrie.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x11f9b3da0>, 'Connection to www.cancrie.com timed out. (connect timeout=10)'))
+2025-08-17 11:54:28,097 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Cancrie Private Limited | type=website, records=6
+2025-08-17 11:54:28,097 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Cancrie Private Limited
+2025-08-17 11:54:28,771 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Cancrie Private Limited
+2025-08-17 11:54:29,655 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Cancrie Private Limited: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Cancrie%20Private%20Limited
+2025-08-17 11:54:29,656 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Cancrie Private Limited
+2025-08-17 11:54:29,656 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Cancrie Private Limited | type=web_data, records=0
+2025-08-17 11:54:29,656 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Cancrie Private Limited
+2025-08-17 11:54:30,079 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:54:32,297 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:54:36,511 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:54:44,728 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Cancrie Private Limited, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:54:44,728 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Cancrie Private Limited
+2025-08-17 11:54:45,673 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Cancrie Private Limited | type=news, records=5
+2025-08-17 11:54:45,673 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:54:45,690 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:13,884 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.spotdot.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_type": "Fou...
+2025-08-17 11:55:13,884 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Spotdot Bioinnovations Private Limited: quality_score=1.11, extracted_fields=10, total_fields=9
+2025-08-17 11:55:13,884 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:13,884 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:14,087 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Spotdot Bioinnovations Private Limited | type=website, records=6
+2025-08-17 11:55:14,087 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:15,041 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:15,856 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Spotdot Bioinnovations Private Limited: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Spotdot%20Bioinnovations%20Private%20Limited
+2025-08-17 11:55:15,856 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:15,856 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Spotdot Bioinnovations Private Limited | type=web_data, records=0
+2025-08-17 11:55:15,856 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:16,569 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:55:18,787 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:55:23,430 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:55:31,649 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Spotdot Bioinnovations Private Limited, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:55:31,649 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Spotdot Bioinnovations Private Limited
+2025-08-17 11:55:32,447 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Spotdot Bioinnovations Private Limited | type=news, records=0
+2025-08-17 11:55:32,447 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:55:32,459 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: FlavinLabs Private Limited
+2025-08-17 11:55:58,421 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://flavinlabs.com",
+    "founders": [
+        {
+            "full_name": "John Flavin",
+            "designation": "CEO",
+            "role_type": "Founder"
+        }
+    ]...
+2025-08-17 11:55:58,421 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for FlavinLabs Private Limited: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:55:58,421 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for FlavinLabs Private Limited
+2025-08-17 11:55:58,421 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for FlavinLabs Private Limited 
+2025-08-17 11:55:59,201 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for FlavinLabs Private Limited  | type=website, records=6
+2025-08-17 11:55:59,201 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for FlavinLabs Private Limited 
+2025-08-17 11:55:59,895 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for FlavinLabs Private Limited 
+2025-08-17 11:56:00,809 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for FlavinLabs Private Limited : 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=FlavinLabs%20Private%20Limited%20
+2025-08-17 11:56:00,809 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for FlavinLabs Private Limited 
+2025-08-17 11:56:00,810 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for FlavinLabs Private Limited  | type=web_data, records=0
+2025-08-17 11:56:00,810 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: FlavinLabs Private Limited 
+2025-08-17 11:56:01,524 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:56:04,168 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:56:08,897 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:56:17,521 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for FlavinLabs Private Limited , falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:56:17,522 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: FlavinLabs Private Limited 
+2025-08-17 11:56:18,421 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for FlavinLabs Private Limited  | type=news, records=0
+2025-08-17 11:56:18,421 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:56:18,432 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Inofinity Research and Development Private Limited
+2025-08-17 11:56:45,803 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://inofinity.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_type": "Found...
+2025-08-17 11:56:45,803 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Inofinity Research and Development Private Limited: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:56:45,803 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Inofinity Research and Development Private Limited
+2025-08-17 11:56:45,803 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Inofinity Research and Development Private Limited
+2025-08-17 11:56:47,319 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Inofinity Research and Development Private Limited | type=website, records=6
+2025-08-17 11:56:47,319 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Inofinity Research and Development Private Limited
+2025-08-17 11:56:48,535 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Inofinity Research and Development Private Limited
+2025-08-17 11:56:49,354 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Inofinity Research and Development Private Limited: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Inofinity%20Research%20and%20Development%20Private%20Limited
+2025-08-17 11:56:49,354 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Inofinity Research and Development Private Limited
+2025-08-17 11:56:49,354 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Inofinity Research and Development Private Limited | type=web_data, records=0
+2025-08-17 11:56:49,354 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Inofinity Research and Development Private Limited
+2025-08-17 11:56:49,974 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:56:52,185 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:56:57,128 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:57:05,343 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Inofinity Research and Development Private Limited, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:57:05,343 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Inofinity Research and Development Private Limited
+2025-08-17 11:57:06,346 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Inofinity Research and Development Private Limited | type=news, records=0
+2025-08-17 11:57:06,346 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:57:06,359 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: InnoDx Solutions Private
+Limited
+2025-08-17 11:57:32,711 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.innodxsolutions.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "CEO/CTO",
+            "role_type": "Founder"
+  ...
+2025-08-17 11:57:32,711 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for InnoDx Solutions Private
+Limited: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:57:32,711 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for InnoDx Solutions Private
+Limited
+2025-08-17 11:57:32,711 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:32,980 | [RUN_20250817_115117] | SCRAPING | ERROR | WebsiteExtractor network error: HTTPSConnectionPool(host='www.innodxsolutions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11fa0b710>: Failed to resolve 'www.innodxsolutions.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-17 11:57:32,980 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for  InnoDx Solutions Private
+Limited
+ | type=website, records=6
+2025-08-17 11:57:32,981 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:34,205 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:35,122 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for  InnoDx Solutions Private
+Limited
+: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=%20InnoDx%20Solutions%20Private%0ALimited%0A
+2025-08-17 11:57:35,123 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:35,123 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for  InnoDx Solutions Private
+Limited
+ | type=web_data, records=0
+2025-08-17 11:57:35,123 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for:  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:35,751 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:57:38,395 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:57:42,609 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:57:51,300 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for  InnoDx Solutions Private
+Limited
+, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:57:51,300 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for:  InnoDx Solutions Private
+Limited
+
+2025-08-17 11:57:52,150 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for  InnoDx Solutions Private
+Limited
+ | type=news, records=0
+2025-08-17 11:57:52,151 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:57:52,162 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: Ardor Biomed India PVT LTD
+2025-08-17 11:58:18,566 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.ardorbiomed.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_type": ...
+2025-08-17 11:58:18,567 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for Ardor Biomed India PVT LTD: quality_score=1.00, extracted_fields=9, total_fields=9
+2025-08-17 11:58:18,567 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for Ardor Biomed India PVT LTD
+2025-08-17 11:58:18,567 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for Ardor Biomed India PVT LTD
+2025-08-17 11:58:19,869 | [RUN_20250817_115117] | SCRAPING | ERROR | WebsiteExtractor network error: Website fetch non-200
+2025-08-17 11:58:19,870 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ardor Biomed India PVT LTD | type=website, records=6
+2025-08-17 11:58:19,870 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for Ardor Biomed India PVT LTD
+2025-08-17 11:58:21,924 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for Ardor Biomed India PVT LTD
+2025-08-17 11:58:22,802 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for Ardor Biomed India PVT LTD: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=Ardor%20Biomed%20India%20PVT%20LTD
+2025-08-17 11:58:22,803 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for Ardor Biomed India PVT LTD
+2025-08-17 11:58:22,803 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ardor Biomed India PVT LTD | type=web_data, records=0
+2025-08-17 11:58:22,803 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: Ardor Biomed India PVT LTD
+2025-08-17 11:58:23,013 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:58:25,642 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:58:30,825 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:58:39,043 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for Ardor Biomed India PVT LTD, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:58:39,044 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: Ardor Biomed India PVT LTD
+2025-08-17 11:58:39,971 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for Ardor Biomed India PVT LTD | type=news, records=0
+2025-08-17 11:58:39,972 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:58:39,980 | [RUN_20250817_115117] | SCRAPING | INFO | Extracting profile for company: COSMOS Biotech LLP
+2025-08-17 11:59:09,199 | [RUN_20250817_115117] | SCRAPING | DEBUG | Raw AI response snippet: 
+{
+    "website_url": "https://www.cosmosbiotech.com",
+    "founders": [
+        {
+            "full_name": "Rahul Kumar",
+            "designation": "Chief Executive Officer",
+            "role_type"...
+2025-08-17 11:59:09,199 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction quality for COSMOS Biotech LLP: quality_score=1.11, extracted_fields=10, total_fields=9
+2025-08-17 11:59:09,200 | [RUN_20250817_115117] | SCRAPING | INFO | Successfully extracted profile for COSMOS Biotech LLP
+2025-08-17 11:59:09,200 | [RUN_20250817_115117] | SCRAPING | INFO | AI profile extraction successful for COSMOS Biotech LLP
+2025-08-17 11:59:10,763 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for COSMOS Biotech LLP | type=website, records=6
+2025-08-17 11:59:10,763 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching patents for COSMOS Biotech LLP
+2025-08-17 11:59:12,406 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching publications for COSMOS Biotech LLP
+2025-08-17 11:59:13,323 | [RUN_20250817_115117] | SCRAPING | WARNING | Publications fetch failed for COSMOS Biotech LLP: 400 Client Error: Bad Request for url: https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=json&term=COSMOS%20Biotech%20LLP
+2025-08-17 11:59:13,323 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching funding for COSMOS Biotech LLP
+2025-08-17 11:59:13,323 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for COSMOS Biotech LLP | type=web_data, records=0
+2025-08-17 11:59:13,323 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Serper for: COSMOS Biotech LLP
+2025-08-17 11:59:13,531 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 2s...
+2025-08-17 11:59:15,748 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 4.0s...
+2025-08-17 11:59:20,377 | [RUN_20250817_115117] | SCRAPING | WARNING | _fetch_serper error: Serper API error, retrying in 8.0s...
+2025-08-17 11:59:29,036 | [RUN_20250817_115117] | SCRAPING | WARNING | Serper failed for COSMOS Biotech LLP, falling back to Google RSS: _fetch_serper failed after 3 retries
+2025-08-17 11:59:29,037 | [RUN_20250817_115117] | SCRAPING | INFO | Fetching news via Google RSS for: COSMOS Biotech LLP
+2025-08-17 11:59:29,890 | [RUN_20250817_115117] | SCRAPING | INFO | Extraction successful for COSMOS Biotech LLP | type=news, records=2
+2025-08-17 11:59:29,891 | [RUN_20250817_115117] | SCRAPING | WARNING | Skipping invalid funding entry: 'int' object has no attribute 'replace'
+2025-08-17 11:59:48,190 | [RUN_20250817_115947] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 11:59:48,500 | [RUN_20250817_115947] | SCRAPING | INFO | Model loaded successfully in 0.31s
+2025-08-17 12:01:33,585 | [RUN_20250817_120133] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 12:01:34,357 | [RUN_20250817_120133] | SCRAPING | INFO | Model loaded successfully in 0.77s
+2025-08-17 12:03:46,828 | [RUN_20250817_120346] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 12:03:47,108 | [RUN_20250817_120346] | SCRAPING | INFO | Model loaded successfully in 0.28s
+2025-08-17 12:05:35,000 | [RUN_20250817_120534] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 12:05:35,251 | [RUN_20250817_120534] | SCRAPING | INFO | Model loaded successfully in 0.25s
+2025-08-17 12:07:27,953 | [RUN_20250817_120727] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 12:07:28,207 | [RUN_20250817_120727] | SCRAPING | INFO | Model loaded successfully in 0.25s
+2025-08-17 12:08:20,006 | [RUN_20250817_120819] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-17 12:08:20,285 | [RUN_20250817_120819] | SCRAPING | INFO | Model loaded successfully in 0.28s
+2025-08-18 21:29:55,590 | [RUN_20250818_212955] | SCRAPING | INFO | Initializing AI model: models/llama-2-7b-chat.Q4_K_M.gguf
+2025-08-18 21:29:58,023 | [RUN_20250818_212955] | SCRAPING | INFO | Model loaded successfully in 2.43s

@@ -42,3 +42,14 @@ serper_api_key: "7d095055a0a1d951eca570553f7e35c436aa31414c5b5360f0c12ff8d72de63
 batch_size: 10           # Number of companies to process in pilot mode
 log_level: "DEBUG"       # DEBUG, INFO, WARNING, ERROR, CRITICAL
 enable_validation: true  # Toggle full data validation step
+
+export:
+  tables:
+    - companies
+    - people
+    - products_services
+    - patents
+    - publications
+    - funding_rounds
+    - news_coverage
+

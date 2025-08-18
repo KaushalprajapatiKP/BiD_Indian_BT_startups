@@ -11,9 +11,13 @@ from src.biotech_pipeline.core.model import (
     ProductService, FundingRound, NewsCoverage, ExtractionLog
 )
 from src.biotech_pipeline.utils.exceptions import LoadingError
-from src.biotech_pipeline.utils.logger import get_logger
+from src.biotech_pipeline.utils.logger import (
+    get_database_logger,
+    get_error_logger
+)
 
-logger = get_logger(__name__)
+# 🔹 Use database-specific logger
+logger = get_database_logger()
 
 
 class PostgresLoader:
@@ -35,7 +39,9 @@ class PostgresLoader:
             return last_id
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"Company load failed: {e}", table="companies")
+            err = f"Company load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="companies")
         finally:
             session.close()
 
@@ -49,7 +55,9 @@ class PostgresLoader:
             logger.info("People loaded: %d for %s", len(people), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"People load failed: {e}", table="people")
+            err = f"People load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="people")
         finally:
             session.close()
 
@@ -60,10 +68,12 @@ class PostgresLoader:
             for record in products:
                 session.add(ProductService(**record))
             session.commit()
-            logger.info("Products loaded: %d for %s", len(products), big_award_id)
+            logger.info("Products/services loaded: %d for %s", len(products), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"Products load failed: {e}", table="products_services")
+            err = f"Products_services load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="products_services")
         finally:
             session.close()
 
@@ -76,7 +86,9 @@ class PostgresLoader:
             logger.info("Patents upserted: %d for %s", len(patents), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"Patents load failed: {e}", table="patents")
+            err = f"Patents load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="patents")
         finally:
             session.close()
 
@@ -89,7 +101,9 @@ class PostgresLoader:
             logger.info("Publications upserted: %d for %s", len(pubs), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"Publications load failed: {e}", table="publications")
+            err = f"Publications load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="publications")
         finally:
             session.close()
 
@@ -102,7 +116,9 @@ class PostgresLoader:
             logger.info("Funding rounds loaded: %d for %s", len(rounds), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"Funding load failed: {e}", table="funding_rounds")
+            err = f"Funding rounds load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="funding_rounds")
         finally:
             session.close()
 
@@ -112,10 +128,12 @@ class PostgresLoader:
             for record in news:
                 session.add(NewsCoverage(**record))
             session.commit()
-            logger.info("News loaded: %d for %s", len(news), big_award_id)
+            logger.info("News coverage loaded: %d for %s", len(news), big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            raise LoadingError(f"News load failed: {e}", table="news_coverage")
+            err = f"News coverage load failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
+            raise LoadingError(err, table="news_coverage")
         finally:
             session.close()
 
@@ -135,6 +153,7 @@ class PostgresLoader:
             logger.info("Extraction log saved for %s", big_award_id)
         except SQLAlchemyError as e:
             session.rollback()
-            logger.error("Extraction log failed: %s", e)
+            err = f"Extraction log failed: {e}"
+            get_error_logger("database_errors").error(err, exc_info=True)
         finally:
             session.close()

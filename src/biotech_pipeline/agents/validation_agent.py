@@ -7,9 +7,14 @@ from datetime import datetime
 
 from src.biotech_pipeline.processors.validator import validator, ValidationSeverity
 from src.biotech_pipeline.utils.exceptions import ValidationError
-from src.biotech_pipeline.utils.logger import get_logger, log_execution_time
+from src.biotech_pipeline.utils.logger import (
+    get_validation_logger,
+    get_error_logger,
+    log_execution_time
+)
 
-logger = get_logger(__name__)
+
+logger = get_validation_logger()
 
 
 class ValidationAgent:
@@ -202,8 +207,9 @@ class ValidationAgent:
                         original_keys=list(payload.keys()),
                         cleaned_keys=list(cleaned_payload.keys()))
             return cleaned_payload
-        except ValidationError as e:
-            logger.error(f"Validation failed for {entity_type}: {e}")
+        except ValidationError as ve:
+            error_logger = get_error_logger("validation_errors")
+            error_logger.error(f"Validation error for {entity_type}: {ve}", exc_info=True)
             raise
     
     def should_reject_data(self, validation_report: Dict[str, Any]) -> bool:

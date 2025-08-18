@@ -1,0 +1,84 @@
+2025-08-17 11:51:46,478 | [RUN_20250817_115117] | biotech_pipeline.scraping | ERROR | [website_scraper.py:86] | extract() | WebsiteExtractor network error: HTTPSConnectionPool(host='www.ezymindhealthcare.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10e3fb5c0>: Failed to resolve 'www.ezymindhealthcare.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-17 11:52:04,314 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:52:53,104 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:53:41,595 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:54:28,096 | [RUN_20250817_115117] | biotech_pipeline.scraping | ERROR | [website_scraper.py:86] | extract() | WebsiteExtractor network error: HTTPSConnectionPool(host='www.cancrie.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x11f9b3da0>, 'Connection to www.cancrie.com timed out. (connect timeout=10)'))
+2025-08-17 11:54:44,727 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:55:31,648 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:56:17,521 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:57:05,342 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:57:32,980 | [RUN_20250817_115117] | biotech_pipeline.scraping | ERROR | [website_scraper.py:86] | extract() | WebsiteExtractor network error: HTTPSConnectionPool(host='www.innodxsolutions.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11fa0b710>: Failed to resolve 'www.innodxsolutions.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2025-08-17 11:57:51,298 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:58:19,869 | [RUN_20250817_115117] | biotech_pipeline.scraping | ERROR | [website_scraper.py:86] | extract() | WebsiteExtractor network error: Website fetch non-200
+2025-08-17 11:58:39,042 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
+2025-08-17 11:59:29,035 | [RUN_20250817_115117] | biotech_pipeline.errors.extraction_errors | ERROR | [base_extractor.py:33] | wrapper() | Max retries exceeded for _fetch_serper: Serper API error
+Traceback (most recent call last):
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/base_extractor.py", line 28, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kaushalprajapati/Desktop/Development/BiD_Indian_BT_startups/src/biotech_pipeline/extractors/news_scrapper.py", line 33, in _fetch_serper
+    raise NetworkError("Serper API error", url, resp.status_code)
+src.biotech_pipeline.utils.exceptions.NetworkError: Serper API error
